@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*---------------------------------------------------------header-----------------------------------------------------------------------*/
+.navbar {
+  background-color: rgb(190, 44, 44);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hfcbusnes {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hdroite li {
+  display: inline-block;
+  padding: 15px 20px;
+}
+
+.hdroite li:hover {
+  background: rgb(170, 86, 86);
+}
+
+.navbar ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.hlogotxt {
+  text-align: center;
+}
+
+.hlogo {
+  height: 50px;
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*---------------------------------------------------------fin header-----------------------------------------------------------------------*/
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1%;
+}
+
+.produit {
+  align-items: center;
+  flex-basis: 30%;
+}
+
+.produit img {
+  width: 100%;
+}
+
+.produit2 {
+  flex-basis: 40%;
+  min-width: 300px;
+}
+
+.produit2 h2 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(190, 44, 44);
+  color: #fff;
+  padding: 5px 15px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+
+.single-product h4 {
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.single-product select {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid rgb(190, 44, 44);
+}
+
+.single-product input {
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid rgb(190, 44, 44);
+}
+
+input:focus {
+  outline: none;
+}
+
+.single-product p {
+  margin-top: 20px;
+}
+
+h3 {
+  margin-top: 2%;
+}
+
+/*---------------------------------------------------------footer-----------------------------------------------------------------------*/
+
+.f2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.f2 > img {
+  height: 60px;
+}
+
+.footer {
+  background-color: rgb(190, 44, 44);
+  color: white;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.footerfb {
+  height: 30px;
+  width: 30px;
+}
+
+.ffbl {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ftxt {
+  text-align: center;
+}
+
+/*---------------------------------------------------------fin footer-----------------------------------------------------------------------*/

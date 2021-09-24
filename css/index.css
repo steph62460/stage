@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+
+
+.navbar{
+    background-color: rgb(190, 44, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.hfcbusnes{
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+
+
+.hdroite li {
+    
+    display: inline-block;
+    padding: 15px 20px ;
+
+
+}
+  
+.hdroite li:hover {
+    background: rgb(170, 86, 86);
+}
+
+.hdroite{
+  border: none;
+}
+
+.navbar ul{
+  display: inline-block;
+  list-style: none;
+
+}
+
+.hlogotxt{
+  text-align: center;
+
+}
+
+.hlogo{
+  height: 50px;
+  width: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*---------------------------------------------------------fin du header-----------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------debut du body-----------------------------------------------------------------------*/
+/*---------------------------------------------------------image body-----------------------------------------------------------------------*/
+
+
+.imagebody{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 300px;
+}
+
+
+.txtcar {
+  text-align: center;
+  font-size: 18px;
+  font-weight: BOLD;
+}
+
+/*---------------------------------------------------------carouselle-----------------------------------------------------------------------*/
+.carousel {
+    width: 600px;
+    margin-bottom: 4%;
+    position:relative;
+    border: 2px solid red;
+  }
+  .carousel > img {
+    display:none;
+    width:100%;
+    height: 120px;
+    
+  }
+  .carousel > input {
+    position:absolute;
+    left:-9999px;
+  }
+  .carousel > input:checked + label + img {
+    display:block;
+  }
+  
+  .carousel > label,
+  .carousel > input:checked ~ label ~ label ~ label ~ label {
+    display:none;
+  }
+  .carousel > input:checked + label {
+    display:block;
+    left:0;
+  }
+  .carousel > input:checked ~ label ~ label ~ label {
+    display:block;
+    right:0;
+  }
+  
+  .carousel > label {
+    position:absolute;
+    top:0;
+    width:25%;
+    height:100%;
+    visibility:hidden;
+  }
+  .carousel > label:before {
+    content:'';
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    visibility:visible;
+  }
+  .carousel > label:after {
+    display:block;
+    position:absolute;
+    top:50%;
+    width:25px;
+    height:25px;
+    line-height:22px;
+    margin:-15px 10px 0 10px;
+    background-color:black;
+    color:white;
+    font-family:'Arial';
+    font-weight:bold;
+    font-size:18px;
+    text-align:center;
+    visibility:hidden;
+    border:2px solid white;
+    border-radius:20px;
+    box-shadow:0 3px 4px black;
+  }
+  .carousel > label:hover:after {
+    visibility:visible;
+  }
+  
+  .carousel > input:checked + label:after {
+    left:0;
+    content:'\00AB';
+  }
+  .carousel > input:checked ~ label ~ label ~ label:after {
+    right:0;
+    content:'\00BB';
+  }
+/*---------------------------------------------------------carouselle-----------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------debut des info actu-----------------------------------------------------------------------*/
+.bmatchinfo{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.bmatch{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.actutxt{
+  color: black;
+}
+
+.bdernier{
+    margin-top: 50%;
+    background-color: blue;
+    height: 125px;
+}
+
+.bactu{
+  border: 2px solid red;
+
+    width: 20%;
+    text-align: center;
+}
+
+.bactuinfo{
+  margin-bottom: 2%;
+  margin-right: 2%;
+  margin-left: 2%;
+    border: 2px solid red;
+    margin-top: 5%;
+}
+/*---------------------------------------------------------fin des info actu-----------------------------------------------------------------------*/
+
+
+
+.entrainement{
+  margin-top: 1%;
+  margin-bottom: 1%;
+display: flex;
+justify-content: space-evenly;
+font-size: 20px;
+}
+
+
+
+
+
+
+.entrainementp1{
+  
+  display: flex;
+}
+
+
+.entrainementp2{
+  display: flex;
+}
+
+.date{
+  margin-top: 5px;
+  border: 2px solid red;
+  border-left-width: 0;
+  padding-left: 50px;
+}
+
+.entrai{
+  margin-top: 5px;
+  border: 2px solid red;
+  border-right-width: 0;
+
+}
+
+  
+/*---------------------------------------------------------footer-----------------------------------------------------------------------*/
+
+.f2{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.f2 >img{
+  height: 50px;
+  margin-top: 5px;
+}
+
+.footer{
+  background-color: rgb(190, 44, 44);
+  color: white;
+  /* bottom: 0; */
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+
+
+.ftxt {
+  
+  text-align: center;
+}
+
+
+
+
+/*---------------------------------------------------------fin du footer-----------------------------------------------------------------------*/

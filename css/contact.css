@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*---------------------------------------------------------header-----------------------------------------------------------------------*/
+.navbar {
+  background-color: rgb(190, 44, 44);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hfcbusnes {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hdroite li {
+  display: inline-block;
+  padding: 15px 20px;
+}
+
+.hdroite li:hover {
+  background: rgb(170, 86, 86);
+}
+
+.navbar ul {
+  display: inline-block;
+  list-style: none;
+}
+
+.hlogotxt {
+  text-align: center;
+}
+
+.hlogo {
+  height: 50px;
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.content{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2%;
+  text-align: center;
+  text-transform: uppercase;
+}
+/*---------------------------------------------------------fin header-----------------------------------------------------------------------*/
+.section {
+  
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.adresse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(190, 44, 44);
+  color: white;
+  height: 50vh;
+  width: 60vh;
+}
+
+.organi{
+  text-decoration: underline;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.fonc{
+  font-size: 2vh;
+  text-align: center;
+}
+
+
+.entrainement{
+  margin-top: 1%;
+  margin-bottom: 1%;
+display: flex;
+justify-content: space-evenly;
+font-size: 20px;
+}
+
+
+
+
+
+
+.entrainementp1{
+  
+  display: flex;
+}
+
+
+.entrainementp2{
+  display: flex;
+}
+.entrai{
+  margin-top: 5px;
+  border: 2px solid red;
+  border-right-width: 0;
+
+}
+
+.date{
+  margin-top: 5px;
+  border: 2px solid red;
+  border-left-width: 0;
+  border-right-width: 0;
+
+  padding-left: 50px;
+}
+
+
+
+.num{
+  margin-top: 5px;
+  border: 2px solid red;
+  border-left-width: 0;
+  padding-left: 50px;
+}
+
+h1{
+  text-align: center;
+}
+
+/*---------------------------------------------------------footer-----------------------------------------------------------------------*/
+
+.f2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.f2 > img {
+  height: 60px;
+}
+
+.footer {
+  background-color: rgb(190, 44, 44);
+  color: white;
+  /* bottom: 0; */
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.footerfb {
+  height: 30px;
+  width: 30px;
+}
+
+.ffbl {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ftxt {
+  text-align: center;
+}
+
+/*---------------------------------------------------------fin footer-----------------------------------------------------------------------*/
