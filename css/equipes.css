@@ -4,47 +4,99 @@
 }
 
 /*---------------------------------------------------------header-----------------------------------------------------------------------*/
-.navbar {
-  background-color: rgb(190, 44, 44);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.hfcbusnes {
-  display: flex;
-  align-items: center;
-  color: white;
-}
-
-.hdroite li {
-  display: inline-block;
-  padding: 15px 20px;
-}
-
-.hdroite li:hover {
-  background: rgb(170, 86, 86);
-}
-
-.navbar ul {
-  display: inline-block;
+li {
   list-style: none;
-}
-
-.hlogotxt {
-  text-align: center;
-}
-
-.hlogo {
-  height: 50px;
-  width: 50px;
 }
 
 a {
   text-decoration: none;
-  color: white;
 }
 
+.header{
+background-color: rgb(190, 44, 44);
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 1.5rem;
+}
+
+.hamburger {
+display: none;
+}
+
+.bar {
+display: block;
+width: 25px;
+height: 3px;
+margin: 5px auto;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+background-color: white;
+}
+
+.nav-menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-item {
+margin-left: 2rem;
+}
+
+.nav-link{
+font-size: 20px;
+font-weight: 400;
+color: #ffffff;
+}
+
+
+
+.nav-logo {
+font-size: 2.1rem;
+font-weight: 500;
+color: white;
+display: flex;
+align-items: center;
+
+}
+
+.nav-logo img{
+height: 50px;
+width: 50px;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+.nav-menu {
+    position: absolute;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: rgb(190, 44, 44);
+    width: 100%;
+    text-align: center;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-item {
+    margin: 1rem;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+}
 /*---------------------------------------------------------fin header-----------------------------------------------------------------------*/
 h2 {
   text-align: center;
@@ -55,14 +107,10 @@ h2 {
 }
 
 .boutique h3 {
-  text-align: center;
-}
-
-.team {
   font-size: 22px;
   color: red;
+  text-align: center;
 }
-
 p {
   font-weight: 550;
   text-align: center;
@@ -88,16 +136,17 @@ p {
 
 /*---------------------------------------------------------footer-----------------------------------------------------------------------*/
 
-.f2 {
+.f2{
   display: flex;
   justify-content: space-evenly;
 }
 
-.f2 > img {
-  height: 60px;
+.f2 >img{
+  height: 50px;
+  margin-top: 5px;
 }
 
-.footer {
+.footer{
   background-color: rgb(190, 44, 44);
   color: white;
   /* bottom: 0; */
@@ -106,20 +155,15 @@ p {
   right: 0;
 }
 
-.footerfb {
-  height: 30px;
-  width: 30px;
-}
 
-.ffbl {
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
 
 .ftxt {
+  
   text-align: center;
+}
+
+span{
+  color: white;
 }
 
 /*---------------------------------------------------------fin footer-----------------------------------------------------------------------*/

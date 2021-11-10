@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+  background-color: rgb(190, 44, 44);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link{
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+
+}
+
+.nav-logo img{
+  height: 50px;
+  width: 50px;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  .nav-menu {
+      position: absolute;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: rgb(190, 44, 44);
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 1rem;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+}
+
+
+
+body {
+    width: 100%;
+    background-image: url(../img/terrain.jpg);
+    background-size: cover;
+   
+}
+
+
+
+
+.form-box {
+  background-color: #ffffffa1;
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    /* background: transparent; */
+    padding: 5px;
+    overflow: hidden;
+    border: 3px solid red;
+}
+
+.button-box {
+    width: 280px;
+    margin: 35px auto;
+    position: relative;
+    /* box-shadow: 0 0 20px 9px rgb(190, 44, 44); */
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 35px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    background: linear-gradient(to right , red, white);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid red;
+    outline: none;
+    background: transparent;
+
+}
+
+.input-field::placeholder {
+    color: black;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right , red, white);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.inscr {
+    margin-top: 20px;
+}
+
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+
+span {
+    color: black;
+    font-size: 12px;
+    bottom: 64px;
+}
+
+#connexion {
+left: 50px;
+}
+
+#inscription {
+    left: 500px;
+    right: 500px;
+}
+
+.f2{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .f2 >img{
+    height: 50px;
+    margin-top: 5px;
+  }
+  
+  .footer{
+    background-color: rgb(190, 44, 44);
+    color: white;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  
+  
+  
+  .ftxt {
+    
+    text-align: center;
+    color: white;
+  }
+  
+  /* /* span{
+    color: white; 
+  } */

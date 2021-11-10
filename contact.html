@@ -5,34 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" media="(max-width: 900px)" href="css/responsive/contactmedia.css">
+
     <title>Document</title>
 </head>
-<header>
-    <div class="navbar">
-
-        <div class="hfcbusnes">
-
-
-    <a class="hlogotxt" href="index.html"><img class="hlogo" src="img/logo club busnes.png" alt=""></a>
-                 <h1><a href="index.html">FC Busnes</a></h1>
-
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo"><img src="img/logo club busnes.png">FC Busnes</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="actu.html" class="nav-link">Actualité</a>
+            </li>
+            <li class="nav-item">
+                <a href="equipes.html" class="nav-link">Equipes</a>
+            </li>
+            <li class="nav-item">
+                <a href="calendrier.html" class="nav-link">Calendrier et Classements</a>
+            </li>
+            <li class="nav-item">
+                <a href="boutique.html" class="nav-link">Boutique</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-
-    <ul class=hdroite>
-       <li><a href="actu.html">Actualité</a></li>
-       <li><a href="equipes.html">Equipes</a></li>
-       <li><a href="calendrier.html">Calendrier et classements</a></li>
-       <li><a href="boutique.html">Boutique</a></li>
-       <li><a href="contact.html">Contact</a></li>
-    </ul>
-       </div>
-    </header>
+    </nav>
+</header>
 <body>
     <div class="section">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2533.0963180909544!2d2.519045515166317!3d50.58816305376216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd1ea218e520a9%3A0x85bc2dbe05e5dafa!2sStade!5e0!3m2!1sfr!2sfr!4v1632216852245!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <div class="adresse">
             <div class="fonc"><strong>Adresse du stade</strong>: <br>Rue de Lalleau 62350 Busnes</div>
             <div class="fonc"><strong>Adresse mail</strong> : <br>busnes.fc.548241@lfhf.fr</div>
+            <div class="fonc"><strong>Page Facebook</strong> : <br><a class="facebook" href="https://www.facebook.com/FootballClubDeBusnes" target="_blank">https://www.facebook.com/FootballClubDeBusnes</a></div>
             <div class="organi">Organigramme du club</div>
             <div class="fonc"><strong>Président</strong> : <br>William Dhénin</div>
             <div class="fonc"><strong>Président adjoint</strong> : </div>
@@ -112,16 +122,32 @@
 
 </body>
 <footer>
+
+
     <div class="footer">
         <div class="f2">
             <img src="img/sponsor/BNE.png" alt="">
             <img src="img/sponsor/f9.png" alt="">
-            <!-- <img src="img/sponsor/jltp-nord.jpg" alt=""> -->
+            <img src="img/sponsor/JLTP-Nord.png">
             <img src="img/sponsor/pains_et_gourmandises.png">
             <img src="img/sponsor/veynat.png" alt="">
         </div>
-        <!-- <div class="ffbl"><a href="https://www.facebook.com/FootballClubDeBusnes" target="_blank"><img class="footerfb" src="img/logo facebook.png" alt="logo facebook"></a></div> -->
         <div class="ftxt">FC Busnes © 2021</div>
     </div>
+
 </footer>
 </html>
+
+
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    </script>

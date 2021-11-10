@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/equipes/equipe.css">
+    <title>FC Busnes - Equipes - u12-u13</title>
+</head>
+<header class="header">
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo"><img src="../img/logo club busnes.png">FC Busnes</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="../actu.html" class="nav-link">Actualité</a>
+            </li>
+            <li class="nav-item">
+                <a href="../equipes.html" class="nav-link">Equipes</a>
+            </li>
+            <li class="nav-item">
+                <a href="../calendrier.html" class="nav-link">Calendrier et Classements</a>
+            </li>
+            <li class="nav-item">
+                <a href="../boutique.html" class="nav-link">Boutique</a>
+            </li>
+            <li class="nav-item">
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="section">
+    <p class="title">U12-U13</p>
+    <div class="team">
+        <img src="../img/u12-u13.jpg" alt="u12-u13" class="photo">
+    </div>
+    <h2>LISTE DES JOUEURS</h2>
+        <div class="tableau">
+        <table>
+            <thead>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Date de naissance</th>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Blondel</td>
+                <td>Mathis</td>
+                <td>02/09/2010</td>
+            </tr>
+            <tr>
+                <td>Boulet</td>
+                <td>Timothe</td>
+                <td>05/07/2010</td>
+            </tr>
+            <tr>
+                <td>Pailleux</td>
+                <td>Enzo</td>
+                <td>04/12/2010</td>
+            </tr>
+            <tr>
+                <td>Queste</td>
+                <td>Jules</td>
+                <td>08/01/2010</td>
+            </tr>
+            <tr>
+                <td>Simon</td>
+                <td>Louis</td>
+                <td>18/06/2010</td>
+            </tr>
+            <tr>
+                <td>Alglave Py</td>
+                <td>Gaspard</td>
+                <td>25/06/2009</td>
+            </tr>
+            <tr>
+                <td>Ammeux</td>
+                <td>Jean Baptiste</td>
+                <td>02/02/2009</td>
+            </tr>
+            <tr>
+                <td>Cichoki</td>
+                <td>Nathan</td>
+                <td>27/12/2009</td>
+            </tr>
+            <tr>
+                <td>Ferlin</td>
+                <td>Ethan</td>
+                <td>19/05/2009</td>
+            </tr>
+            <tr>
+                <td>Gunduz</td>
+                <td>Huseyin</td>
+                <td>09/10/2009</td>
+            </tr>
+            <tr>
+                <td>Marien</td>
+                <td>Norlan</td>
+                <td>31/07/2009</td>
+            </tr>
+            <tr>
+                <td>Paquet</td>
+                <td>Maxence</td>
+                <td>28/09/2009</td>
+            </tr>
+            <tr>
+                <td>Ryckewaert</td>
+                <td>Remy</td>
+                <td>06/02/2009</td>
+            </tr>
+            <tr>
+                <td>Nayet</td>
+                <td>Lola</td>
+                <td>13/07/2010</td>
+            </tr>
+            <tr>
+                <td>Marien</td>
+                <td>Athenais</td>
+                <td>09/03/2009</td>
+            </tr>
+            <tr>
+                <td>Ruckebusch</td>
+                <td>Nina</td>
+                <td>05/08/2009</td>
+            </tr>
+            <tr>
+                <td>Delbecque</td>
+                <td>Pamela</td>
+                <td>30/01/2008</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+<footer>
+
+
+    <div class="footer">
+        <div class="f2">
+            <img src="../img/sponsor/BNE.png" alt="">
+            <img src="../img/sponsor/f9.png" alt="">
+            <img src="../img/sponsor/JLTP-Nord.png">
+            <img src="../img/sponsor/pains_et_gourmandises.png">
+            <img src="../img/sponsor/veynat.png" alt="">
+        </div>
+        <div class="ftxt">FC Busnes © 2021</div>
+    </div>
+
+</footer>
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    </script>
+</html>

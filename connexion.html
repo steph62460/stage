@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/connexion.css">
+    <title>Document</title>
+</head>
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo"><img src="img/logo club busnes.png">FC Busnes</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="actu.html" class="nav-link">Actualité</a>
+            </li>
+            <li class="nav-item">
+                <a href="equipes.html" class="nav-link">Equipes</a>
+            </li>
+            <li class="nav-item">
+                <a href="calendrier.html" class="nav-link">Calendrier et Classements</a>
+            </li>
+            <li class="nav-item">
+                <a href="boutique.html" class="nav-link">Boutique</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="inscription()">Connexion</button>
+                <button type="button" class="toggle-btn">Inscription</button>
+            </div>
+            <form id="connexion" class="input-group">
+                <input type="text" class="input-field" placeholder="Email" id="email" required>
+                <input type="password" class="input-field" placeholder="Mot de passe"  id="password" required>
+                <input type="checkbox" class="check-box"><span>Rester connecté</span>
+                <button type="submit" class="submit-btn" id="connexion">Connexion</button>
+            </form>
+            <form id="inscription" class="input-group">
+                <input type="text" class="input-field" placeholder="Nom" required>
+                <input type="text" class="input-field" placeholder="Prenom" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Mot de passe" required>
+                <input type="password" class="input-field" placeholder="Répétez votre mot de passe">
+                <button type="submit" class="submit-btn inscr" id="inscription">Inscription</button>
+            </form>
+        </div>
+    </div>
+</body>
+<footer>
+
+
+    <div class="footer">
+        <div class="f2">
+            <img src="img/sponsor/BNE.png" alt="">
+            <img src="img/sponsor/f9.png" alt="">
+            <img src="img/sponsor/JLTP-Nord.png">
+            <img src="img/sponsor/pains_et_gourmandises.png">
+            <img src="img/sponsor/veynat.png" alt="">
+        </div>
+        <div class="ftxt">FC Busnes © 2021</div>
+    </div>
+
+</footer>
+<script src="js/connexion.js"></script>
+</html>

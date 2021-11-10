@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/equipes/equipe.css">
+    <title>FC Busnes - Equipes - Vétérans</title>
+</head>
+<header class="header">
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo"><img src="../img/logo club busnes.png">FC Busnes</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="../actu.html" class="nav-link">Actualité</a>
+            </li>
+            <li class="nav-item">
+                <a href="../equipes.html" class="nav-link">Equipes</a>
+            </li>
+            <li class="nav-item">
+                <a href="../calendrier.html" class="nav-link">Calendrier et Classements</a>
+            </li>
+            <li class="nav-item">
+                <a href="../boutique.html" class="nav-link">Boutique</a>
+            </li>
+            <li class="nav-item">
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="section">
+    <p class="title">VETERANS</p>
+    <div class="team">
+        <img src="../img/veterans.jpg" alt="veterans" class="photo">
+    </div>
+    <h2>LISTE DES JOUEURS</h2>
+        <div class="tableau">
+        <table>
+            <thead>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Date de naissance</th>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Becquet</td>
+                <td>Loic</td>
+                <td>15/03/1983</td>
+            </tr>
+            <tr>
+                <td>Blarel</td>
+                <td>Christophe</td>
+                <td>25/01/1975</td>
+            </tr>
+            <tr>
+                <td>Decoopman</td>
+                <td>Anthony</td>
+                <td>05/03/1986</td>
+            </tr>
+            <tr>
+                <td>Delattre</td>
+                <td>Alain</td>
+                <td>23/07/1974</td>
+            </tr>
+            <tr>
+                <td>Delbende</td>
+                <td>Loic</td>
+                <td>18/09/1983</td>
+            </tr>
+            <tr>
+                <td>Gauduin</td>
+                <td>Michael</td>
+                <td>17/05/1972</td>
+            </tr>
+            <tr>
+                <td>Heniart</td>
+                <td>Julien</td>
+                <td>01/10/1984</td>
+            </tr>
+            <tr>
+                <td>Marien</td>
+                <td>Julien</td>
+                <td>01/09/1985</td>
+            </tr>
+            <tr>
+                <td>Marien</td>
+                <td>Marc</td>
+                <td>22/05/1977</td>
+            </tr>
+            <tr>
+                <td>Mastin</td>
+                <td>Michael</td>
+                <td>28/06/1986</td>
+            </tr>
+            <tr>
+                <td>Nayet</td>
+                <td>Stephane</td>
+                <td>10/05/1975</td>
+            </tr>
+            <tr>
+                <td>Pailleux</td>
+                <td>Frederic</td>
+                <td>28/08/1981</td>
+            </tr>
+            <tr>
+                <td>Paquet</td>
+                <td>Sebastien</td>
+                <td>11/07/1978</td>
+            </tr>
+            <tr>
+                <td>Vasseur</td>
+                <td>Didier</td>
+                <td>26/04/1968</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+<footer>
+
+
+    <div class="footer">
+        <div class="f2">
+            <img src="../img/sponsor/BNE.png" alt="">
+            <img src="../img/sponsor/f9.png" alt="">
+            <img src="../img/sponsor/JLTP-Nord.png">
+            <img src="../img/sponsor/pains_et_gourmandises.png">
+            <img src="../img/sponsor/veynat.png" alt="">
+        </div>
+        <div class="ftxt">FC Busnes © 2021</div>
+    </div>
+
+</footer>
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    </script>
+</html>

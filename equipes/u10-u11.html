@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/equipes/equipe.css">
+    <title>FC Busnes - Equipes - u10-u11</title>
+</head>
+<header class="header">
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo"><img src="../img/logo club busnes.png">FC Busnes</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="../actu.html" class="nav-link">Actualité</a>
+            </li>
+            <li class="nav-item">
+                <a href="../equipes.html" class="nav-link">Equipes</a>
+            </li>
+            <li class="nav-item">
+                <a href="../calendrier.html" class="nav-link">Calendrier et Classements</a>
+            </li>
+            <li class="nav-item">
+                <a href="../boutique.html" class="nav-link">Boutique</a>
+            </li>
+            <li class="nav-item">
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="section">
+    <p class="title">U10-U11</p>
+    <div class="team">
+        <img src="../img/u10-u11.jpg" alt="u10-u11" class="photo">
+    </div>
+    <h2>LISTE DES JOUEURS</h2>
+        <div class="tableau">
+        <table>
+            <thead>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Date de naissance</th>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Allouchery</td>
+                <td>Aime</td>
+                <td>03/10/2012</td>
+            </tr>
+            <tr>
+                <td>Delbende</td>
+                <td>Robin</td>
+                <td>09/12/2012</td>
+            </tr>
+            <tr>
+                <td>Demaison</td>
+                <td>Joshua</td>
+                <td>10/09/2012</td>
+            </tr>
+            <tr>
+                <td>Gheeraert</td>
+                <td>Axel</td>
+                <td>14/09/2012</td>
+            </tr>
+            <tr>
+                <td>Meziane</td>
+                <td>Sacha</td>
+                <td>15/11/2012</td>
+            </tr>
+            <tr>
+                <td>Achour</td>
+                <td>Nael</td>
+                <td>12/02/2011</td>
+            </tr>
+            <tr>
+                <td>Beaucourt</td>
+                <td>Ylan</td>
+                <td>01/05/2011</td>
+            </tr>
+            <tr>
+                <td>Crogiez</td>
+                <td>Blaise</td>
+                <td>18/01/2011</td>
+            </tr>
+            <tr>
+                <td>Delattre</td>
+                <td>Lucas</td>
+                <td>14/11/2011</td>
+            </tr>
+            <tr>
+                <td>Hannebicq</td>
+                <td>Marius</td>
+                <td>17/11/2011</td>
+            </tr>
+            <tr>
+                <td>Heniart</td>
+                <td>Noah</td>
+                <td>10/02/2011</td>
+            </tr>
+            <tr>
+                <td>Lemoine</td>
+                <td>Tom</td>
+                <td>06/07/2011</td>
+            </tr>
+            <tr>
+                <td>Nayet</td>
+                <td>Sam</td>
+                <td>19/11/2011</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+<footer>
+
+
+    <div class="footer">
+        <div class="f2">
+            <img src="../img/sponsor/BNE.png" alt="">
+            <img src="../img/sponsor/f9.png" alt="">
+            <img src="../img/sponsor/JLTP-Nord.png">
+            <img src="../img/sponsor/pains_et_gourmandises.png">
+            <img src="../img/sponsor/veynat.png" alt="">
+        </div>
+        <div class="ftxt">FC Busnes © 2021</div>
+    </div>
+
+</footer>
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    </script>
+</html>

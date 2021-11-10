@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/equipes/equipe.css">
+    <title>FC Busnes - Equipes - Féminines</title>
+</head>
+<header class="header">
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo"><img src="../img/logo club busnes.png">FC Busnes</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="../actu.html" class="nav-link">Actualité</a>
+            </li>
+            <li class="nav-item">
+                <a href="../equipes.html" class="nav-link">Equipes</a>
+            </li>
+            <li class="nav-item">
+                <a href="../calendrier.html" class="nav-link">Calendrier et Classements</a>
+            </li>
+            <li class="nav-item">
+                <a href="../boutique.html" class="nav-link">Boutique</a>
+            </li>
+            <li class="nav-item">
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="section">
+    <p class="title">FEMININES</p>
+    <div class="team">
+        <img src="../img/feminines.jpg" alt="feminines" class="photo">
+    </div>
+    <h2>LISTE DES JOUEURS</h2>
+        <div class="tableau">
+        <table>
+            <thead>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Date de naissance</th>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Deleplace</td>
+                <td>Amelie</td>
+                <td>23/03/1996</td>
+            </tr>
+            <tr>
+                <td>Feburier</td>
+                <td>Lucile</td>
+                <td>25/03/1999</td>
+            </tr>
+            <tr>
+                <td>Gauduin</td>
+                <td>Melanie</td>
+                <td>24/06/1998</td>
+            </tr>
+            <tr>
+                <td>Iannelli</td>
+                <td>Chloe</td>
+                <td>10/11/1997</td>
+            </tr>
+            <tr>
+                <td>Marien</td>
+                <td>Angelique</td>
+                <td>13/11/1979</td>
+            </tr>
+            <tr>
+                <td>Montvoisin</td>
+                <td>Isabelle</td>
+                <td>15/02/1987</td>
+            </tr>
+            <tr>
+                <td>Pailleux</td>
+                <td>Cindy</td>
+                <td>07/01/1981</td>
+            </tr>
+            <tr>
+                <td>Scotee</td>
+                <td>Isabelle</td>
+                <td>09/04/1985</td>
+            </tr>
+            <tr>
+                <td>Willery</td>
+                <td>Celine</td>
+                <td>18/08/1995</td>
+            </tr>
+            <tr>
+                <td>Gauduin</td>
+                <td>Brytanie</td>
+                <td>01/11/2002</td>
+            </tr>
+            <tr>
+                <td>Perus</td>
+                <td>Emma</td>
+                <td>12/06/2002</td>
+            </tr>
+            <tr>
+                <td>Leriche</td>
+                <td>Marie</td>
+                <td>31/01/2003</td>
+            </tr>
+            <tr>
+                <td>Nayet</td>
+                <td>Justine</td>
+                <td>13/02/2003</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+<footer>
+
+
+    <div class="footer">
+        <div class="f2">
+            <img src="../img/sponsor/BNE.png" alt="">
+            <img src="../img/sponsor/f9.png" alt="">
+            <img src="../img/sponsor/JLTP-Nord.png">
+            <img src="../img/sponsor/pains_et_gourmandises.png">
+            <img src="../img/sponsor/veynat.png" alt="">
+        </div>
+        <div class="ftxt">FC Busnes © 2021</div>
+    </div>
+
+</footer>
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    </script>
+</html>

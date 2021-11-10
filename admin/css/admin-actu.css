@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    background-color: rgb(190, 44, 44);
+    margin-top: 2%;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 800px;
+}
+
+button {
+    width: 100px;
+    margin: 20px 5px 20px 5px;
+    border-radius: 30px;
+} 
+
+.button {
+    display: flex;
+    flex-direction: row;
+
+}
+
+label {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.edit {
+    background: linear-gradient(to right, green, rgb(127, 216, 127));
+    border-radius: 30px;
+    color: white;
+}
+
+.update {
+    background: linear-gradient(to right, blue, rgb(89, 89, 177));
+    border-radius: 30px;
+    color: white;
+}
+
+.delete {
+    background: linear-gradient(to right, red, rgb(233, 144, 144));
+    border-radius: 30px;
+    color: white;
+}
+
+select {
+    margin-bottom: 2%;
+}
+
+.table {
+    margin-top: 2%;
+}
+
+tr {
+    text-align: center;
+}
+
+.button2 {
+    width: 200px;
+    background-color: rgb(190, 44, 44);
+    color: white;
+}
