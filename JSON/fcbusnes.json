@@ -48,8 +48,24 @@
       "description": "test",
       "id": 1,
       "img": "img/boutique/parka-nike.jpg",
-      "price": 62.5,
-      "visibility": true
+      "price1": 62.50,
+      "price2": 55.50,
+      "visibility": true,
+      "optgroup": "Enfant",
+      "optgroup2": "Adulte",
+      "option1": "XXS",
+      "option2": "XS",
+      "option3": "S",
+      "option4": "M",
+      "option5": "L",
+      "option6": "S",
+      "option7": "M",
+      "option8": "L",
+      "option9": "XL",
+      "option10": "XXL",
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix: 17.00€",
@@ -58,8 +74,23 @@
       "id": 2,
       "description": "test",
       "img": "img/boutique/coupe-vent-joma.jpg",
-      "price": 17.0,
-      "visibility": true
+      "price1": 17.00,
+      "optgroup": "Enfant",
+      "optgroup2": "Adulte",
+      "option1": "XXS",
+      "option2": "XS",
+      "option3": "S",
+      "option4": "M",
+      "option5": "L",
+      "option6": "S",
+      "option7": "M",
+      "option8": "L",
+      "option9": "XL",
+      "option10": "XXL",
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix Taille M: 25.00€",
@@ -68,8 +99,24 @@
       "id": 3,
       "description": "test",
       "img": "img/boutique/sac-puma.png",
-      "price": 25.0,
-      "visibility": true
+      "price1": 25.00,
+      "price2": 20.00,
+      "optgroup": "Taille",
+      "optgroup2": "",
+      "option1": "S",
+      "option2": "M",
+      "option3": "",
+      "option4": "",
+      "option5": "",
+      "option6": "",
+      "option7": "",
+      "option8": "",
+      "option9": "",
+      "option10": "",
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix Adulte: 17.50€",
@@ -78,8 +125,24 @@
       "id": 4,
       "description": "test",
       "img": "img/boutique/maillot-entrainement-homme.jpg",
-      "price": 17.5,
-      "visibility": true
+      "price1": 17.50,
+      "optgroup": "Enfant",
+      "optgroup2": "Adulte",
+      "option1": "XXS",
+      "option2": "XS",
+      "option3": "S",
+      "option4": "M",
+      "option5": "L",
+      "option6": "S",
+      "option7": "M",
+      "option8": "L",
+      "option9": "XL",
+      "option10": "XXL",
+      "price2": 16.10,
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix Adulte: 10.50€",
@@ -88,8 +151,24 @@
       "id": 5,
       "description": "test",
       "img": "img/boutique/short-entrainement-homme.jfif",
-      "price": 10.5,
-      "visibility": true
+      "price1": 10.50,
+      "optgroup": "Enfant",
+      "optgroup2": "Adulte",
+      "option1": "XXS",
+      "option2": "XS",
+      "option3": "S",
+      "option4": "M",
+      "option5": "L",
+      "option6": "S",
+      "option7": "M",
+      "option8": "L",
+      "option9": "XL",
+      "option10": "XXL",
+      "price2": 9.10,
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix: 5.60€",
@@ -98,8 +177,23 @@
       "id": 6,
       "description": "test",
       "img": "img/boutique/chaussette_puma.jpg",
-      "price": 5.6,
-      "visibility": true
+      "price1": 5.60,
+      "optgroup": "Pointure",
+      "option1": "27-30",
+      "option2": "31-34",
+      "option3": "35-38",
+      "option4": "39-42",
+      "option5": "43-46",
+      "option6": "",
+      "option7": "",
+      "option8": "",
+      "option9": "",
+      "option10": "",
+      "optgroup2": "",
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix Adulte: 35€",
@@ -108,8 +202,24 @@
       "id": 7,
       "description": "test",
       "img": "img/boutique/haut_zippe_puma.jfif",
-      "price": 35.0,
-      "visibility": true
+      "price1": 35.00,
+      "price2": 31.50,
+      "optgroup": "Enfant",
+      "optgroup2": "Adulte",
+      "option1": "XXS",
+      "option2": "XS",
+      "option3": "S",
+      "option4": "M",
+      "option5": "L",
+      "option6": "S",
+      "option7": "M",
+      "option8": "L",
+      "option9": "XL",
+      "option10": "XXL",
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix Adulte: 24.50€",
@@ -118,8 +228,24 @@
       "id": 8,
       "description": "test",
       "img": "img/boutique/pantalon_puma.png",
-      "price": 24.5,
-      "visibility": true
+      "price1": 24.50,
+      "price2": 22.75,
+      "optgroup": "Enfant",
+      "optgroup2": "Adulte",
+      "option1": "XXS",
+      "option2": "XS",
+      "option3": "S",
+      "option4": "M",
+      "option5": "L",
+      "option6": "S",
+      "option7": "M",
+      "option8": "L",
+      "option9": "XL",
+      "option10": "XXL",
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix: 19.00€",
@@ -128,8 +254,23 @@
       "id": 9,
       "description": "test",
       "img": "img/boutique/maillot_feminin_nike.jpg",
-      "price": 19.0,
-      "visibility": true
+      "price1": 19.00,
+      "optgroup": "Adulte",
+      "optgroup2": "",
+      "option1": "XS",
+      "option2": "S",
+      "option3": "M",
+      "option4": "L",
+      "option5": "XL",
+      "option6": "",
+      "option7": "",
+      "option8": "",
+      "option9": "",
+      "option10": "",
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     },
     {
       "adulte": "Prix: 12.60€",
@@ -138,15 +279,31 @@
       "id": 10,
       "description": "test",
       "img": "img/boutique/short_nike.jpg",
-      "price": 12.6,
-      "visibility": true
+      "optgroup": "Adulte",
+      "optgroup2": "",
+      "option1": "XS",
+      "option2": "S",
+      "option3": "M",
+      "option4": "L",
+      "option5": "XL",
+      "option6": "",
+      "option7": "",
+      "option8": "",
+      "option9": "",
+      "option10": "",
+      "price1": 12.60,
+      "visibility": true,
+      "qte": 0,
+      "price": 0,
+      "taille": 0
     }
   ],
   "equipes": {
     "u6-u7": [
       {
         "title": "U6-U7",
-        "img": "img/u6-u7.jpg"
+        "img": "img/u6-u7.jpg",
+        "cle": 1
       },
       {
         "id": 1,
@@ -170,7 +327,8 @@
     "u8-u9": [
       {
         "title": "U8-U9",
-        "img": "img/u8-u9"
+        "img": "img/u8-u9.jpg",
+        "cle": 2
       },
       {
         "id": 1,
@@ -218,7 +376,8 @@
     "u10-u11" : [
       {
         "title": "U10-U11",
-        "img": "img/u10-u11.jpg"
+        "img": "img/u10-u11.jpg",
+        "cle": 3
       },{
         "id" : 1,
         "prenom": "Aime",
@@ -304,7 +463,8 @@
     ],
     "u12-u13" : [{
       "title": "U12-U13",
-      "img" : "img/u12-13.jpg"
+      "img" : "img/u12-u13.jpg",
+      "cle": 4
     }, {
       "id" : 1,
         "prenom": "Timothe",
@@ -393,7 +553,8 @@
     }],
     "u14-u15" : [{
       "title": "U14-U15",
-      "img" : "img/u14-u15.jpg"
+      "img" : "img/u14-u15.jpg",
+      "cle": 5
     },{
       "id" : 1,
         "prenom": "Raphael",
@@ -467,7 +628,8 @@
     }],
     "feminines" : [{
       "title": "SENIORS FEMININES",
-      "img" : "img/feminines.jpg"
+      "img" : "img/feminines.jpg",
+      "cle": 6
     },
   {
     "id" : 1,
@@ -547,7 +709,8 @@
   }],
   "seniors" : [{
     "title": "SENIORS",
-    "img": "img/seniors.jpg"
+    "img": "img/seniors.jpg",
+    "cle": 7
   },{
     "id" : 1,
         "prenom": "Mathieu",
@@ -787,7 +950,8 @@
   ],
   "veterans" : [{
     "title": "VETERANS",
-    "img": "img/veterans.jpg"
+    "img": "img/veterans.jpg",
+    "cle": 7
   },{
     "id" : 1,
         "prenom": "Zakaria",

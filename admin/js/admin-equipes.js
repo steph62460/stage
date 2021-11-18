@@ -26,7 +26,8 @@ const app = initializeApp(firebaseConfig);
 
 const btnReturn = document.querySelector('.button2');
 
-btnReturn.addEventListener('click' , () => {
+btnReturn.addEventListener('click' , (event) => {
+    event.preventDefault();
     location.assign("index_admin.html")
 })
 
@@ -54,14 +55,16 @@ btnReturn.addEventListener('click' , () => {
               })
                   .then(() => {
                       alert('data inserted');
+                      selectAllData()
+                      cancel()
                   })
                   .catch((error) => {
                       alert('Error : ' + error)
                   })
                 }
-          insertBtn.addEventListener('click', () => {
+          insertBtn.addEventListener('click', (event) => {
+            event.preventDefault();
               insertData();
-              idb.innerText = "";
           })     
 
           // FUNCTION SELECTALL
@@ -81,8 +84,26 @@ btnReturn.addEventListener('click' , () => {
                   })
           }
 
-          selectAllBtn.addEventListener('click', selectAllData)
+          selectAllBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+              selectAllData()
+          })
 
+          // methode reset
+
+          function cancel() {
+            idb.value = "";
+            titleb.value = "";
+            imgb.value = "";
+            texteb.value = "";
+            scoreb.value = "";
+            buteurb.value = "";
+            texte2b.value = "";
+            score2b.value = "";
+            buteur2b.value = "";
+            prochainAfficheb.value = "";
+            visibilityb.value = "";
+        }
           const displayTable = () => {
             console.log(equipes);
             const tableauNode = equipes.map((article) => { 
@@ -95,7 +116,7 @@ btnReturn.addEventListener('click' , () => {
         const app2 = document.querySelector('tbody');
         
         const createTable = (article) => {
-        
+            if (article.id) {
         const tr2 = document.createElement('tr');
         const td = document.createElement('td');
         const td2 = document.createElement('td');
@@ -119,7 +140,8 @@ btnReturn.addEventListener('click' , () => {
         btnUpdate.innerText = "UPDATE";
         btnUpdate.classList.add('update')
 
-        btnEdit.addEventListener('click',() => {
+        btnEdit.addEventListener('click',(event) => {
+            event.preventDefault();
             const dbref = ref(db);
             get(child(dbref,  ("equipes/" + menub.value + "/") + article.id))
                 .then((snapshot) => {
@@ -138,7 +160,8 @@ btnReturn.addEventListener('click' , () => {
                 })
 
         })
-        btnUpdate.addEventListener('click', () => {
+        btnUpdate.addEventListener('click', (event) => {
+            event.preventDefault();
             update(ref(db, ("equipes/" + menub.value + "/") + (article.id)), {
                 id: idb.value,
                   nom: nomb.value,
@@ -148,13 +171,16 @@ btnReturn.addEventListener('click' , () => {
             })
                 .then(() => {
                     alert('data updated')
+                    selectAllData()
+                    cancel()
                 })
                 .catch((error) => {
                     alert('Error : ' + error)
                 })
         })
 
-        btnSupp.addEventListener("click", () => {
+        btnSupp.addEventListener("click", (event) => {
+            event.preventDefault();
             update(ref(db, ("equipes/" + menub.value + "/") + article.id), {
                 visibility: false,
                
@@ -162,7 +188,8 @@ btnReturn.addEventListener('click' , () => {
             })
                 .then(() => {
                     alert('data deleted')
-                     
+                     selectAllData()
+                     cancel()
                 })
                 .catch((error) => {
                     alert('Error : ' + error)
@@ -175,6 +202,9 @@ btnReturn.addEventListener('click' , () => {
         td7.appendChild(btnSupp);
         td6.appendChild(btnUpdate);
           
-        return tr2;
-        
-        }  
+        return tr2;     
+
+    } else {
+        return ""
+    }
+}

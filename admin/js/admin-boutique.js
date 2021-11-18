@@ -22,6 +22,13 @@ const app = initializeApp(firebaseConfig);
 
           const db = getDatabase();
 
+          const btnReturn = document.querySelector('.button2');
+
+btnReturn.addEventListener('click' , (event) => {
+    event.preventDefault();
+    location.assign("index_admin.html")
+})
+
 let boutique = [];
 
 let idb = document.querySelector("#idB");
@@ -49,14 +56,16 @@ function insertData() {
     })
         .then(() => {
             alert('data inserted');
+            selectAllData()
+            cancel()
         })
         .catch((error) => {
             alert('Error : ' + error)
         })
 }
-insertBtn.addEventListener('click', () => {
+insertBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     insertData();
-    idb.innerText = "";
 })     
 
 let allMyUser = [];
@@ -73,7 +82,26 @@ function selectAllData() {
         })
 }
 
-selectAllBtn.addEventListener('click', selectAllData)
+selectAllBtn.addEventListener('click', (event) => {
+event.preventDefault()
+    selectAllData()
+})
+
+// methode reset
+
+function cancel() {
+    idb.value = "";
+    titleb.value = "";
+    imgb.value = "";
+    texteb.value = "";
+    scoreb.value = "";
+    buteurb.value = "";
+    texte2b.value = "";
+    score2b.value = "";
+    buteur2b.value = "";
+    prochainAfficheb.value = "";
+    visibilityb.value = "";
+}
 
 const displayTable = () => {
     console.log(boutique);
@@ -98,6 +126,7 @@ const td5 = document.createElement('td');
 const td6 = document.createElement('td');
 const td7 = document.createElement('td');
 const td8 = document.createElement('td');
+const td9 = document.createElement('td');
 const img = document.createElement('img');
 const btnEdit = document.createElement('button');
 const btnSupp = document.createElement('button');
@@ -111,6 +140,7 @@ td2.append(img);
 td3.innerText = article.denomination;
 td4.innerText = article.description;
 td5.innerText = article.price + "€";
+td9.innerText = article.visibility
 btnEdit.classList.add('edit');
 btnEdit.innerText = "EDIT"
 btnSupp.classList.add('delete');
@@ -118,7 +148,8 @@ btnSupp.innerText = "DELETE";
 btnUpdate.innerText = "UPDATE";
 btnUpdate.classList.add('update')
 
-btnEdit.addEventListener('click',() => {
+btnEdit.addEventListener('click',(event) => {
+    event.preventDefault();
     const dbref = ref(db);
     get(child(dbref, "boutique/" + (article.id - 1)))
         .then((snapshot) => {
@@ -141,7 +172,8 @@ btnEdit.addEventListener('click',() => {
 
 })
 
-btnUpdate.addEventListener('click', () => {
+btnUpdate.addEventListener('click', (event) => {
+    event.preventDefault();
     update(ref(db, "boutique/" + (article.id - 1)), {
         id: idb.value,
         denomination: titleb.value,
@@ -153,6 +185,8 @@ btnUpdate.addEventListener('click', () => {
         visibility: "true" ? true : false
     })
         .then(() => {
+            cancel()
+            selectAllData()
             alert('data updated')
         })
         .catch((error) => {
@@ -160,14 +194,16 @@ btnUpdate.addEventListener('click', () => {
         })
 })
 
-btnSupp.addEventListener("click", () => {
+btnSupp.addEventListener("click", (event) => {
+    event.preventDefault();
     update(ref(db, "boutique/" + (article.id -1)), {
         visibility: false,
             
     })
         .then(() => {
             alert('data deleted')
-             
+             selectAllData()
+             cancel()
         })
         .catch((error) => {
             alert('Error : ' + error)
@@ -175,7 +211,7 @@ btnSupp.addEventListener("click", () => {
 
 })
 
-tr2.append(td, td2, td3, td4, td5, td6, td8, td7)
+tr2.append(td, td2, td3, td4, td5,td9, td6, td8, td7)
 td6.appendChild(btnEdit);
 td7.appendChild(btnSupp);
 td8.appendChild(btnUpdate);

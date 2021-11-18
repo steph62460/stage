@@ -22,11 +22,13 @@ const app = initializeApp(firebaseConfig);
 
           const db = getDatabase();
 
+
 let articles = [];
 
 const btnReturn = document.querySelector('.button2');
 
-btnReturn.addEventListener('click' , () => {
+btnReturn.addEventListener('click' , (event) => {
+    event.preventDefault();
     location.assign("index_admin.html")
 })
 
@@ -59,18 +61,21 @@ btnReturn.addEventListener('click' , () => {
                   score2:score2b.value,
                   buteur2:buteur2b.value,
                   prochainAffiche: prochainAfficheb.value,
-                  visibility: visibilityb.value
+                  visibility: "true" ? true : false
               })
                   .then(() => {
+                      selectAllData()
+                      cancel()
                       alert('data inserted');
                   })
                   .catch((error) => {
                       alert('Error : ' + error)
                   })
           }
-          insertBtn.addEventListener('click', () => {
+          insertBtn.addEventListener('click', (event) => { 
+            
+              event.preventDefault();
               insertData();
-              idb.innerText = "";
           })     
 
           // FUNCTION SELECTALL
@@ -79,7 +84,7 @@ btnReturn.addEventListener('click' , () => {
               const users = fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/articles.json')
                   .then(async response => {
                       try {
-                          const allMyUser = await response.json();
+                          allMyUser = await response.json();
                           articles = allMyUser;
                           displayTable();
                       } catch (e) {
@@ -88,11 +93,29 @@ btnReturn.addEventListener('click' , () => {
                   })
           }
 
-          selectAllBtn.addEventListener('click', selectAllData)
+          selectAllBtn.addEventListener('click',(event) => {
+            event.preventDefault();
+            selectAllData()  
+          })
+
+          // methode reset
+
+          function cancel() {
+            idb.value = "";
+            titleb.value = "";
+            imgb.value = "";
+            texteb.value = "";
+            scoreb.value = "";
+            buteurb.value = "";
+            texte2b.value = "";
+            score2b.value = "";
+            buteur2b.value = "";
+            prochainAfficheb.value = "";
+            visibilityb.value = "";
+        }
 
           const displayTable = () => {
               console.log(articles);
-    
             const tableauNode = articles.map((article) => { 
                 return createTable(article)
             });
@@ -110,12 +133,14 @@ btnReturn.addEventListener('click' , () => {
         const td3 = document.createElement('td');
         const td4 = document.createElement('td');
         const td5 = document.createElement('td');
+        const td6 = document.createElement('td');
         const btnEdit = document.createElement('button');
         const btnSupp = document.createElement('button');
         const btnUpdate = document.createElement('button')
         
         td.innerText = article.id;
         td2.innerText = article.title;
+        td6.innerText = article.visibility
         btnEdit.classList.add('edit');
         btnEdit.innerText = "EDIT"
         btnSupp.classList.add('delete');
@@ -123,7 +148,8 @@ btnReturn.addEventListener('click' , () => {
         btnUpdate.innerText = "UPDATE";
         btnUpdate.classList.add('update')
 
-        btnEdit.addEventListener('click',() => {
+        btnEdit.addEventListener('click',(event) => {
+            event.preventDefault();
             const dbref = ref(db);
             get(child(dbref, "articles/" + (article.id - 1)))
                 .then((snapshot) => {
@@ -149,7 +175,8 @@ btnReturn.addEventListener('click' , () => {
                 })
 
         })
-        btnUpdate.addEventListener('click', () => {
+        btnUpdate.addEventListener('click', (event) => {
+            event.preventDefault();
             update(ref(db, "articles/" + (article.id - 1)), {
                 id: idb.value,
                 title: titleb.value,
@@ -165,21 +192,23 @@ btnReturn.addEventListener('click' , () => {
             })
                 .then(() => {
                     alert('data updated')
+                    selectAllData()
+                    cancel()
                 })
                 .catch((error) => {
                     alert('Error : ' + error)
                 })
         })
 
-        btnSupp.addEventListener("click", () => {
+        btnSupp.addEventListener("click", (event) => {
+            event.preventDefault();
             update(ref(db, "articles/" + (article.id -1)), {
-                visibility: false,
-               
-                
+                visibility: !article.visibility,
             })
                 .then(() => {
-                    alert('data deleted')
-                     
+                    alert('data deleted');
+                    selectAllData();
+                    cancel()
                 })
                 .catch((error) => {
                     alert('Error : ' + error)
@@ -187,7 +216,7 @@ btnReturn.addEventListener('click' , () => {
         
         })
         
-        tr2.append(td, td2, td3, td5, td4)
+        tr2.append(td, td2, td6, td3, td5, td4)
         td3.appendChild(btnEdit);
         td4.appendChild(btnSupp);
         td5.appendChild(btnUpdate);

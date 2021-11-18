@@ -22,11 +22,6 @@ fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/panier.json')
         try {
             panier = await response.json();
             panier == undefined ? panier = [] : panier = panier.panier;
-            // if(panier == undefined) {
-            //     panier = [];
-            // } else {
-            //  panier = panier.panier;   
-            // }
             console.log(panier);
 
             if (panier.length !== 0) {
@@ -54,69 +49,69 @@ const paragr2 = document.createElement('p');
 paragr2.innerText = art.adulte;
 const paragr3 = document.createElement('p');
 paragr3.innerText = art.enfant;
-const div2 = document.createElement('div');
-div2.classList.add('button')
-const btnAjout = document.createElement('button');
-btnAjout.innerText = "Ajouter au Panier";
-const btnSupp = document.createElement('button');
-btnSupp.innerText = "Supprimer du Panier";
-btnSupp.classList.add('buttonsupp');
-btnSupp.addEventListener('click', () => {
-    btnSupp.classList.add('buttonsupp');
-    btnAjout.classList.remove('buttonsupp');
-    removeArticleCart(art);
-    priceCart();
-});
+// const div2 = document.createElement('div');
+// div2.classList.add('button')
+// const btnAjout = document.createElement('button');
+// btnAjout.innerText = "Ajouter au Panier";
+// const btnSupp = document.createElement('button');
+// btnSupp.innerText = "Supprimer du Panier";
+// btnSupp.classList.add('buttonsupp');
+// btnSupp.addEventListener('click', () => {
+//     btnSupp.classList.add('buttonsupp');
+//     btnAjout.classList.remove('buttonsupp');
+//     removeArticleCart(art);
+//     priceCart();
+// });
 
-btnAjout.addEventListener('click', () => {
-    btnSupp.classList.remove('buttonsupp');
-    btnAjout.classList.add('buttonsupp');
-    addArticleCart(art);
-    priceCart();
-})
+// btnAjout.addEventListener('click', () => {
+//     btnSupp.classList.remove('buttonsupp');
+//     btnAjout.classList.add('buttonsupp');
+//     addArticleCart(art);
+//     priceCart();
+// })
 
 
 a.appendChild(img);
-div2.append(btnAjout, btnSupp)
-div.append(a , title, paragr2, paragr3, div2);
+// div2.append(btnAjout, btnSupp)
+div.append(a , title, paragr2, paragr3);
 return div;
 
 }
 
-const addArticleCart = (art) => {
-    panier.push(art);
-    console.log(panier);
-    span.classList.add('span')
-    span.innerText =panier.length;
-    insertCart(panier);
-}
-    // fonction suppression article au panier
-const removeArticleCart = (art) => {
-    let deleteArticle = panier.filter(value => value.id !== art.id);
-    panier = deleteArticle;
-    insertCart(panier);
-    console.log(panier);
-    if (panier.length !==0) {
-        span.classList.add('span')
-    span.innerText =panier.length;
-    } else {
-        span.classList.remove('span');
-        span.innerText = "";
-    }
-};
+// const addArticleCart = (art) => {
+//     panier.push(art);
+//     console.log(panier);
+//     span.classList.add('span')
+//     span.innerText =panier.length;
+//     insertCart(panier);
+// }
+//     // fonction suppression article au panier
+// const removeArticleCart = (art) => {
+//     let deleteArticle = panier.filter(value => value.id !== art.id);
+//     panier = deleteArticle;
+//     insertCart(panier);
+//     console.log(panier);
+//     if (panier.length !==0) {
+//         span.classList.add('span')
+//     span.innerText =panier.length;
+//     } else {
+//         span.classList.remove('span');
+//         span.innerText = "";
+//     }
+// };
 
 
-const priceCart = () => {
-    const total = panier.reduce((acc, value) => {
-        acc += value.price;
-        return acc;
+// const priceCart = () => {
+//     const total = panier.reduce((acc, value) => {
+//         acc += value.price;
+//         return acc;
         
-}, 0);
-const total2 = parseFloat(total.toFixed(3));
-console.log(total2);
-};
+// }, 0);
+// const total2 = parseFloat(total).toFixed(2);
+// console.log(total2);
+// };
 
-// Fonction ajout panier a firebase
+// // Fonction ajout panier a firebase
 
 function insertCart(panier) {
     set(ref(db, "panier/"), {

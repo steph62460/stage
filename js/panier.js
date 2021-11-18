@@ -50,6 +50,13 @@ lien2.appendChild(img2);
 panier2.append(lien2, span);
 
 
+const divButton = document.querySelector('.button')
+const buttonValider = document.createElement('button');
+buttonValider.classList.add('buttonValider')
+buttonValider.innerText = "Payer maintenant"
+
+divButton.append(buttonValider)
+
 let panier = [];
 
 const displayPanier = () => {
@@ -62,6 +69,7 @@ fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/panier.json')
            if (panier.length !== 0) {
            span.innerText = panier.length; 
            span.classList.add('span')
+           pricePanier(panier);
        }
        const panierNode = panier.map((article, index) => {
            return createPanierElement(article, index)
@@ -75,7 +83,11 @@ fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/panier.json')
 })
 }
 
+let total2;
+let totalArticleOne;
+
 const createPanierElement = (article, index) => {
+    priceArticle(article)
     const divArticle = document.createElement('div');
     divArticle.classList.add('article');
     const img = document.createElement('img');
@@ -83,14 +95,31 @@ const createPanierElement = (article, index) => {
     const h3 = document.createElement('h3');
     h3.innerText = article.denomination;
     const price = document.createElement('p');
-    price.innerText = article.price + "€";
+    price.innerText = parseFloat(article.price).toFixed(2) + "€";
+    const divTaille = document.createElement('div');
+    const labelTaille = document.createElement('label');
+    labelTaille.innerText = "Taille : ";
+    const inputTaille = document.createElement('input');
+    inputTaille.value = article.taille;
     const divQte = document.createElement('div');
     const label = document.createElement('label');
     label.innerText = "Qte : ";
     const inputQte = document.createElement('input');
     inputQte.type = "number";
     inputQte.min = "1";
-    inputQte.value = "1";
+    inputQte.value = Number(article.qte);
+    const totalArticle = document.createElement('p');
+    totalArticle.innerText = parseFloat(totalArticleOne).toFixed(2) + "€";
+
+    totalArticle.classList.add('test');
+    affichage = document.querySelector('.test')
+    inputQte.addEventListener('change', () => {
+        article.qte = inputQte.value
+        pricePanier(panier);
+        priceArticle(article)
+        totalArticle.innerText = parseFloat(totalArticleOne).toFixed(2) + "€";
+    })
+
     const btnDelete = document.createElement('button');
     btnDelete.innerText = "X";
     btnDelete.classList.add('btnDelete');
@@ -108,17 +137,25 @@ const createPanierElement = (article, index) => {
     })
 
     divQte.append(label, inputQte);
-    divArticle.append(img, h3, price, divQte, btnDelete);
+    divTaille.append(labelTaille, inputTaille)
+    divArticle.append(img, h3, price, divTaille, divQte, btnDelete, totalArticle);
 
     return divArticle;
 }
 
+
 const pricePanier = (panier) => {
     const totalPanier = panier.reduce((acc, value) => {
-        acc +=value.price;
+        acc +=value.price1 * Number(value.qte);
         return acc;
     }, 0);
-    total.innerText = totalPanier;
+    total2 = parseFloat(totalPanier).toFixed(2);
+    total.innerText = total2 + "€";
+}
+
+const priceArticle = (article) => {
+    const total3 = article.price * Number(article.qte)
+    totalArticleOne = parseFloat(total3).toFixed(2);
 }
 
 
