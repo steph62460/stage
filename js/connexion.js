@@ -1,6 +1,6 @@
 const emailc = document.querySelector("#email");
-const passwordc = document.querySelector("#password")
-const buttonc = document.querySelector("#connexion");
+const passwordc = document.querySelector("#passwordC")
+const buttonc = document.querySelector("#connexionC");
 // const buttoni = document.querySelector("#inscription");
 
 buttonc.addEventListener('click', () => {

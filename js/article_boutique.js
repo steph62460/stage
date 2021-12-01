@@ -106,32 +106,89 @@ if (article.id == 1 || article.id == 4 || article.id == 5 || article.id == 7 || 
             }
         }
     })
-} else {
-    h3.innerText = parseFloat(article.price1).toFixed(2) + "€";
-    article.price = article.price1
-    article.taille = select.value;
+}  else if (article.id == 6) {
+    select.addEventListener('change', () => {
+        console.log(select.value);
+    
+        switch(select.value) {
+    case "27-30":
+    case "31-34":
+    case "35-38":
+    case "39-42":
+    case "43-46": 
+        {
+            console.log(select.value);
+            h3.innerText = parseFloat(article.price1).toFixed(2) + "€";
+            article.price = article.price1
+            article.taille = select.value;
+            break;
+        } 
+            default: {
+
+            }
+        }
+    })
+} else if (article.id == 9 || article.id == 10) {
+    select.addEventListener('change', () => {
+        console.log(select.value);
+    
+        switch(select.value) {
+    case "XS":
+    case "S":
+    case "M":
+    case "L":
+    case "XL": 
+        {
+            console.log(select.value);
+            h3.innerText = parseFloat(article.price1).toFixed(2) + "€";
+            article.price = article.price1
+            article.taille = select.value;
+            break;
+        } 
+            default: {
+
+            }
+        }
+    })
+} else if (article.id == 2){
+    select.addEventListener('change', () => {
+        console.log(select.value);
+    
+        switch(select.value) {
+    case "XXS":
+    case "XS":
+    case "S":
+    case "M":
+    case "L": 
+    case "XL": 
+    case "XXL": 
+        {
+            console.log(select.value);
+            h3.innerText = parseFloat(article.price1).toFixed(2) + "€";
+            article.price = article.price1
+            article.taille = select.value;
+            break;
+        } 
+            default: {
+
+            }
+        }
+    })
 }
+
 
 const divButton = document.createElement('div');
 divButton.classList.add('divbutton')
-const btnDelete = document.createElement('button');
-    btnDelete.innerText = "X";
-    btnDelete.classList.add('btnDelete');
-    btnDelete.style.display = "none";
-btnDelete.addEventListener('click', (event) => {
-    event.preventDefault();
-    removeArticleCart(article)
-})
 
-const button = document.createElement('button');
-button.classList.add("btn");
-button.addEventListener('click', (event) => {
+const buttonAjout = document.createElement('button');
+buttonAjout.classList.add("btn");
+buttonAjout.addEventListener('click', (event) => {
     article.qte = input.value;
     event.preventDefault();
-    btnDelete.style.display = "inline-block"
-    addArticleCart(article)
+    addArticleCart(article);
+
 })
-button.innerText = "Ajoutez au panier";
+buttonAjout.innerText = "Ajoutez au panier";
 const h4 = document.createElement('h4');
 h4.innerText = "Détail du produit";
 const descripArticle = document.createElement('p');
@@ -150,7 +207,7 @@ select.append(option, optgroup, option1, option2)
 
 }
 qte.appendChild(input);
-divButton.append(button, btnDelete)
+divButton.append(buttonAjout)
 divDescrip.append(h2, select, qte, h3, divButton, h4, descripArticle);
 app.append(div, divDescrip);
 

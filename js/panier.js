@@ -84,6 +84,7 @@ fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/panier.json')
 }
 
 let total2;
+let affichage;
 let totalArticleOne;
 
 const createPanierElement = (article, index) => {

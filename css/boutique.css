@@ -97,6 +97,17 @@ width: 50px;
 
 }
 
+@media (max-width: 500px) {
+
+.article img {
+  margin-left: 25px;
+}
+
+.article h3 {
+  min-width: 250px;
+  }
+}
+
 /*---------------------------------------------------------fin header-----------------------------------------------------------------------*/
 h2 {
   text-align: center;

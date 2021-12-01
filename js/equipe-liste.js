@@ -24,38 +24,45 @@ const app = initializeApp(firebaseConfig);
 
 let equipes = [];
 
-const titre = document.querySelector(".section");
 
-const title = document.createElement('p');
-title.classList.add('title');
-title.innerText = equipes.title;
-const divImg = document.createElement('div');
-divImg.classList.add('team');
-const img = document.createElement('img');
-img.src = equipes.img;
-divImg.appendChild(img);
-titre.append(title, divImg);
 
 
 
 
 const createArticle = (equipes) => {
 
-const tableau = document.querySelector('tbody')
+    if(equipes.id) {
+        const tableau = document.querySelector('tbody')
 
-    const tr = document.createElement('tr');
-    const td = document.createElement('td');
-    const td2 = document.createElement('td');
-    const td3 = document.createElement('td');
+        const tr = document.createElement('tr');
+        const td = document.createElement('td');
+        const td2 = document.createElement('td');
+        const td3 = document.createElement('td');
+    
+        td.innerText = equipes.nom;
+        td2.innerText = equipes.prenom;
+        td3.innerText = equipes.date;
+    
+        tr.append(td, td2, td3);
+        tableau.appendChild(tr)
+    
+        return tableau;
+    };
+    if (!equipes.id) {
+        const titre = document.querySelector(".section");
+        const title = document.createElement('p');
+        title.classList.add('title');
+        title.innerText = equipes.title;
+        const divImg = document.createElement('div');
+        divImg.classList.add('team');
+        const img = document.createElement('img');
+        img.src = equipes.img;
+        divImg.appendChild(img);
+        titre.append(title, divImg);
+        return titre;
+    }
 
-    td.innerText = equipes.nom;
-    td2.innerText = equipes.prenom;
-    td3.innerText = equipes.date;
 
-    tr.append(td, td2, td3);
-    tableau.appendChild(tr)
-
-    return tableau;
     
 }
 const  startCode = () => {
@@ -69,7 +76,10 @@ const  startCode = () => {
             try {
                equipes = await response.json();
             console.log(equipes);
-            createArticle(equipes) 
+            const equipeNode = equipes.map((equipe) => {
+                return createArticle(equipe) 
+            })
+            
             } catch (error) {
                 console.log(error);
             }

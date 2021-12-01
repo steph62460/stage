@@ -75,3 +75,13 @@ import { getDatabase, get, ref, set, child, update, remove}
 from "https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js";
 
 const db = getDatabase();
+
+const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }

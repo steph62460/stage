@@ -95,7 +95,16 @@
       display: block;
       cursor: pointer;
   }
-  
+  }
+
+  @media (max-width: 500px) {
+    body {
+     min-height: calc(100vh - 96px - 55px - 18.4px);   
+    }
+
+    .articles img {
+      width: 100%;
+    }
   }
   /*---------------------------------------------------------fin header-----------------------------------------------------------------------*/
 
