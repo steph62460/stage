@@ -1,14 +1,13 @@
 const emailc = document.querySelector("#email");
-const passwordc = document.querySelector("#passwordC")
+const passwordc = document.querySelector("#passwordC");
 const buttonc = document.querySelector("#connexionC");
 // const buttoni = document.querySelector("#inscription");
 
 buttonc.addEventListener('click', () => {
-    if(emailc.value=="admin" || passwordc.value=="admin"){
+    if(emailc.value=="admin@admin.fr" || passwordc.value=="@Admin123"){
 		alert ("Login successfully")
-             window.location="panier.html";
+             location.assign('panier.html');
 	}else {
-        alert("Please complete the required field!");
         }; 
 })
 	
@@ -20,6 +19,7 @@ buttonc.addEventListener('click', () => {
 //              location.assign("panier.html")
 //         }; 
 // })
+
 
 let x = document.getElementById("connexion");
     let y = document.getElementById("inscription");
