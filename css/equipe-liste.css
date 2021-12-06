@@ -114,6 +114,11 @@ a {
       display: flex;
       justify-content: center;
   }
+
+  .team img {
+    width: 800px;
+    height: 500px;
+  }
   
   .photo {
     border-radius: 20px;
@@ -163,12 +168,7 @@ h2 {
   
   /*---------------------------------------------------------footer-----------------------------------------------------------------------*/
   
-  .f2{
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .f2 >img{
+  .f2 {
     height: 50px;
     margin-top: 5px;
   }
@@ -176,17 +176,14 @@ h2 {
   .footer{
     background-color: rgb(190, 44, 44);
     color: white;
-    bottom: 0;
-    /* position: absolute; */
-    left: 0;
-    right: 0;
+    display: flex;
+    justify-content: space-evenly;
   }
   
-  
-  
   .ftxt {
-    
+    background-color: rgb(190, 44, 44);
     text-align: center;
+    color: white;
   }
   
   /*---------------------------------------------------------fin footer-----------------------------------------------------------------------*/

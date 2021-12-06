@@ -39,7 +39,7 @@ const createArticle = (article) => {
   
 
     articleLien.classList.add('lien');
-    lien.href = `page_actu.html?id=${article.id}&cat=articles`;
+    lien.href = `page_actu.php?id=${article.id}&cat=articles`;
     lien.innerText = "Lire la suite";
     lien.style.color = "rgb(190, 44, 44)";
 

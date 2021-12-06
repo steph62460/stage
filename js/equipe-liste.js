@@ -24,11 +24,6 @@ const app = initializeApp(firebaseConfig);
 
 let equipes = [];
 
-
-
-
-
-
 const createArticle = (equipes) => {
 
     if(equipes.id) {
@@ -85,21 +80,6 @@ const  startCode = () => {
             }
             
         })
-
-        //    get(child(dbref, "equipes/" + params.cat + '/' + params.souscat))
-        //             .then((snapshot) => {
-        //                 if (snapshot.exists()) {
-        //                     equipes = snapshot.val();
-        //                     console.log(equipes);
-        //                     createArticle(equipes);
-
-        //                 } else {
-        //                     alert('No User Found !!!')
-        //                 }
-        //             })
-        //             .catch((error) => {
-        //                 console.log('Error :' + error)
-        //             })
 }
 
 startCode();

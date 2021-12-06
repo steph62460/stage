@@ -42,7 +42,7 @@ const createEquipes = (equipe) => {
     const title = document.createElement('h3');
     title.innerText = equipe.title;
     const lienEquipe = document.createElement('a');
-    lienEquipe.href = `equipe-liste.html?cat=equipes&souscat=${equipe.type}`;
+    lienEquipe.href = `equipe-liste.php?cat=equipes&souscat=${equipe.type}`;
     const img = document.createElement('img');
     img.src = equipe.img;
 

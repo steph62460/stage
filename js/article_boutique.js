@@ -267,7 +267,7 @@ const hamburger = document.querySelector(".hamburger");
     const panier2 = document.querySelector(".nav-item2");
 const span = document.createElement('span');
 const lien2 = document.createElement('a');
-lien2.href = "panier.html";
+lien2.href = "panier.php";
 const img2 = document.createElement("img");
 img2.src = "img/cart.png";
 img2.classList.add('panier')

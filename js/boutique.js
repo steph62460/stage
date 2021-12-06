@@ -40,7 +40,7 @@ const createArticleElement = (art) => {
 const div = document.createElement('div');
 div.classList.add('article');
 const a = document.createElement('a');
-a.href = `article_boutique.html?id=${art.id}&cat=boutique`;
+a.href = `article_boutique.php?id=${art.id}&cat=boutique`;
 const img = document.createElement('img');
 img.src = art.img;
 const title = document.createElement('h3');

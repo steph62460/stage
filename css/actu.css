@@ -121,28 +121,20 @@ h2 {
 }
 /* Debut footer */
 
-.f2{
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .f2 >img{
-    height: 50px;
-    margin-top: 5px;
-  }
-  
-  .footer{
-    background-color: rgb(190, 44, 44);
-    color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
+.f2 {
+  height: 50px;
+  margin-top: 5px;
+}
 
-  .ftxt { 
-    text-align: center;
-  }
-  
-  span{
-    color: white;
-  }
+.footer{
+  background-color: rgb(190, 44, 44);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ftxt {
+  background-color: rgb(190, 44, 44);
+  text-align: center;
+  color: white;
+}

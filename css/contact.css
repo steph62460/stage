@@ -183,12 +183,7 @@ h1{
 
 /*---------------------------------------------------------footer-----------------------------------------------------------------------*/
 
-.f2{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.f2 >img{
+.f2 {
   height: 50px;
   margin-top: 5px;
 }
@@ -196,21 +191,13 @@ h1{
 .footer{
   background-color: rgb(190, 44, 44);
   color: white;
-  /* bottom: 0; */
-  position: absolute;
-  left: 0;
-  right: 0;
+  display: flex;
+  justify-content: space-evenly;
 }
-
-
 
 .ftxt {
-  
+  background-color: rgb(190, 44, 44);
   text-align: center;
-}
-
-span{
   color: white;
 }
-
 /*---------------------------------------------------------fin footer-----------------------------------------------------------------------*/
