@@ -4,7 +4,7 @@ const displayArticle = () => {
     const users = fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/articles.json')
         .then(async response => {
             try {
-                const articles = await response.json();
+                 articles = await response.json();
                 let newArticles = articles.sort((par1, par2) => par2.id - par1.id)
                 const articlesNode = newArticles.filter((value) => value.visibility == true).map((article) => {
                 return createArticle(article)
@@ -25,7 +25,6 @@ const createArticle = (article) => {
     const divArticle = document.createElement('div')
     const imgArticle = document.createElement('img');
     const actu = document.createElement('p');
-    const articleLien = document.createElement('div');
     const lien = document.createElement('a')
 
     divActu.classList.add('article');
@@ -36,16 +35,20 @@ const createArticle = (article) => {
     imgArticle.src = article.img;
     actu.classList.add('texte1')
     actu.innerText = article.texte1;
-  
 
-    articleLien.classList.add('lien');
+    let date = new Date();
+
+    const divLien = document.createElement('div');
+    divLien.classList.add('divLien')
+    const datePublication = document.createElement('p');
+    datePublication.innerHTML = 'Publié le ' + new Intl.DateTimeFormat('french', { dateStyle: 'long', timeStyle: 'medium' }).format(date); 
+    lien.classList.add('lien');
     lien.href = `page_actu.php?id=${article.id}&cat=articles`;
     lien.innerText = "Lire la suite";
-    lien.style.color = "rgb(190, 44, 44)";
 
-    articleLien.appendChild(lien);
+    divLien.append(datePublication, lien)
     divArticle.append(imgArticle, actu);
-    divActu.append(h2, divArticle, articleLien);
+    divActu.append(h2, divArticle, divLien);
 
     return divActu;
 }

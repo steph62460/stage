@@ -39,7 +39,7 @@ const art = document.querySelector('.articles-container');
 const panier2 = document.querySelector(".nav-item2");
 const span = document.createElement('span');
 const lien2 = document.createElement('a');
-lien2.href = "panier.html";
+lien2.href = "panier.php";
 const img2 = document.createElement("img");
 img2.src = "img/cart.png";
 img2.classList.add('panier');
@@ -50,12 +50,15 @@ lien2.appendChild(img2);
 panier2.append(lien2, span);
 
 
-const divButton = document.querySelector('.button')
+const divButton = document.querySelector('.button');
+const abutton = document.createElement('a');
 const buttonValider = document.createElement('button');
 buttonValider.classList.add('buttonValider')
-buttonValider.innerText = "Payer maintenant"
+buttonValider.innerText = "Payer maintenant";
+abutton.href = "#"
 
-divButton.append(buttonValider)
+abutton.append(buttonValider);
+divButton.append(abutton);
 
 let panier = [];
 

@@ -1,3 +1,14 @@
+<?php
+
+
+$pdo = require_once './db.php';
+
+$statement = $pdo->prepare('SELECT * FROM articles');
+$statement->execute();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +23,6 @@
     <!---------------------------------------------------------fin du header----------------------------------------------------------------------->
 
     <div class="article-panier">
-
     <img class="imagebody" src="img/test.jpg" alt="image du stade">
     <div class="bmatchinfo">
         <div class="bmatch">

@@ -98,114 +98,62 @@ a {
 }
 
 
-
-body {
-    width: 100%;
-    background-image: url(../img/terrain.jpg);
-    background-size: cover;
-   
+.formulaire {
+  min-height: calc(100vh - 200px -  86px - 73.4px);
+  
 }
 
-
-
-
-.form-box {
-  background-color: #ffffffa1;
-    width: 380px;
-    height: 480px;
-    position: relative;
-    margin: 6% auto;
-    /* background: transparent; */
-    padding: 5px;
-    overflow: hidden;
-    border: 3px solid red;
+h2 {
+  margin-top: 20px;
+  font-size: 40px;
 }
 
-.button-box {
-    width: 280px;
-    margin: 35px auto;
-    position: relative;
-    /* box-shadow: 0 0 20px 9px rgb(190, 44, 44); */
-    border-radius: 30px;
+form {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgb(190, 44, 44);
+  width: 25%;
+  height: 380px;
 }
 
-.toggle-btn {
-    padding: 10px 35px;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
+.text {
+  margin-top: 10px;
 }
 
-#btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 140px;
-    height: 100%;
-    background: linear-gradient(to right , red, white);
-    border-radius: 30px;
-    transition: .5s;
+input{
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.input-group {
-    top: 100px;
-    position: absolute;
-    width: 280px;
-    transition: .5s;
+.checkbox {
+  display: flex;
+  margin-top: 5px;
 }
 
-.input-field {
-    width: 100%;
-    padding: 10px 0;
-    margin: 5px 0;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 1px solid red;
-    outline: none;
-    background: transparent;
-
+.connecte {
+  margin-left: 10px;
+  margin-top: 8px;
 }
 
-.input-field::placeholder {
-    color: black;
+.oubliemdp {
+text-decoration: none;
+color: rgb(190, 44, 44);
 }
 
-.submit-btn {
-    width: 85%;
-    padding: 10px 30px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background: linear-gradient(to right , red, white);
-    border: 0;
-    outline: none;
-    border-radius: 30px;
+.inscrip {
+  color: black;
+  font-size: 24px;
 }
 
-.inscr {
-    margin-top: 20px;
-}
-
-.check-box {
-    margin: 30px 10px 30px 0;
-}
-
-span {
-    color: black;
-    font-size: 12px;
-    bottom: 64px;
-}
-
-#connexion {
-left: 50px;
-}
-
-#inscription {
-    left: 500px;
-    right: 500px;
+button {
+  background-color: rgb(190, 44, 44);
+  border-radius: 15px;
+  height: 30px;
+  width: 100px;
+  color: white;
+  margin-top: 10px;
 }
 
 .f2 {

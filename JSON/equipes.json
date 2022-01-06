@@ -1,0 +1,684 @@
+   [{
+      "date_naissance" : "23/03/1996",
+      "idequipes" : 1,
+      "nom" : "Deleplace",
+      "prenom" : "Amelie"
+    }, {
+      "date_naissance" : "25/03/1999",
+      "idequipes" : 1,
+      "nom" : "Feburier",
+      "prenom" : "lucile"
+    }, {
+      "date_naissance" : "24/06/1998",
+      "idequipes" : 1,
+      "nom" : "Gauduin",
+      "prenom" : "Melanie"
+    }, {
+      "date_naissance" : "10/11/1997",
+      "idequipes" : 1,
+      "nom" : "Iannelli",
+      "prenom" : "Chloe"
+    }, {
+      "date_naissance" : "13/11/1979",
+      "idequipes" : 1,
+      "nom" : "Marien",
+      "prenom" : "Angelique"
+    }, {
+      "date_naissance" : "15/02/1987",
+      "idequipes" : 1,
+      "nom" : "Montvoisin",
+      "prenom" : "Isabelle"
+    }, {
+      "date_naissance" : "07/01/1981",
+      "idequipes" : 1,
+      "nom" : "Pailleux",
+      "prenom" : "Cindy"
+    }, {
+      "date_naissance" : "09/04/1985",
+      "idequipes" : 1,
+      "nom" : "Scotee",
+      "prenom" : "Isabelle"
+    }, {
+      "date_naissance" : "18/08/1995",
+      "idequipes" : 1,
+      "nom" : "Willery",
+      "prenom" : "Celine"
+    }, {
+      "date_naissance" : "01/11/2002",
+      "idequipes" : 1,
+      "nom" : "Gauduin",
+      "prenom" : "Brytanie"
+    }, {
+      "date_naissance" : "12/06/2002",
+      "idequipes" : 1,
+      "nom" : "Perus",
+      "prenom" : "Emma"
+    }, {
+      "date_naissance" : "07/01/2003",
+      "idequipes" : 1,
+      "nom" : "Janszen",
+      "prenom" : "Lindsay"
+    }, {
+      "date_naissance" : "31/01/2003",
+      "idequipes" : 1,
+      "nom" : "Leriche",
+      "prenom" : "Marie"
+    }, {
+      "date_naissance" : "13/02/2003",
+      "idequipes" : 1,
+      "nom" : "Nayet",
+      "prenom" : "Justine"
+    }, {
+      "date_naissance" : "14/08/2005",
+      "idequipes" : 1,
+      "nom" : "Marien",
+      "prenom" : "Louna"
+    } ,
+     {
+      "date_naissance" : "08/02/1990",
+      "idequipes" : 7,
+      "nom" : "Bart",
+      "prenom" : "Mathieu"
+    }, {
+      "date_naissance" : "08/08/1990",
+      "idequipes" : 7,
+      "nom" : "Bouquet",
+      "prenom" : "Vincent"
+    }, {
+      "date_naissance" : "24/09/1993",
+      "idequipes" : 7,
+      "nom" : "Chatelain",
+      "prenom" : "Thomas"
+    }, {
+      "date_naissance" : "05/03/1998",
+      "idequipes" : 7,
+      "nom" : "Christy",
+      "prenom" : "Dylan"
+    }, {
+      "date_naissance" : "25/02/1992",
+      "idequipes" : 7,
+      "nom" : "Debril",
+      "prenom" : "Alexandre"
+    }, {
+      "date_naissance" : "24/07/1997",
+      "idequipes" : 7,
+      "nom" : "Declercq",
+      "prenom" : "Brandon"
+    }, {
+      "date_naissance" : "06/01/1995",
+      "idequipes" : 7,
+      "nom" : "Declercq",
+      "prenom" : "Dylan"
+    }, {
+      "date_naissance" : "23/09/1995",
+      "idequipes" : 7,
+      "nom" : "Delannoy",
+      "prenom" : "Amaury"
+    }, {
+      "date_naissance" : "21/04/1993",
+      "idequipes" : 7,
+      "nom" : "Delattre",
+      "prenom" : "Benjamin"
+    }, {
+      "date_naissance" : "09/05/1995",
+      "idequipes" : 7,
+      "nom" : "Delgrange",
+      "prenom" : "Remi"
+    }, {
+      "date_naissance" : "16/03/1991",
+      "idequipes" : 7,
+      "nom" : "Delsaux",
+      "prenom" : "Stephan"
+    }, {
+      "date_naissance" : "04/01/1991",
+      "idequipes" : 7,
+      "nom" : "Denneulin",
+      "prenom" : "Alexandre"
+    }, {
+      "date_naissance" : "01/03/1992",
+      "idequipes" : 7,
+      "nom" : "Duchez",
+      "prenom" : "Maxime"
+    }, {
+      "date_naissance" : "17/05/1998",
+      "idequipes" : 7,
+      "nom" : "Dupuis",
+      "prenom" : "Charles"
+    }, {
+      "date_naissance" : "02/09/1998",
+      "idequipes" : 7,
+      "nom" : "Edmon",
+      "prenom" : "Samuel"
+    }, {
+      "date_naissance" : "28/05/1989",
+      "idequipes" :7,
+      "nom" : "Fievez",
+      "prenom" : "Dylan"
+    }, {
+      "date_naissance" : "16/07/1992",
+      "idequipes" : 7,
+      "nom" : "Fortrie",
+      "prenom" : "Maxime"
+    }, {
+      "date_naissance" : "06/01/1994",
+      "idequipes" : 7,
+      "nom" : "Hottelard",
+      "prenom" : "Theo"
+    }, {
+      "date_naissance" : "25/09/1997",
+      "idequipes" : 7,
+      "nom" : "Hrycyk",
+      "prenom" : "Gaetan"
+    }, {
+      "date_naissance" : "06/02/1997",
+      "idequipes" : 7,
+      "nom" : "Lamaire",
+      "prenom" : "Steven"
+    }, {
+      "date_naissance" : "21/07/1995",
+      "idequipes" : 7,
+      "nom" : "Leroy",
+      "prenom" : "Alexandre"
+    }, {
+      "date_naissance" : "24/08/1990",
+      "idequipes" : 7,
+      "nom" : "Lesage",
+      "prenom" : "Jeremy"
+    }, {
+      "date_naissance" : "20/10/1992",
+      "idequipes" : 7,
+      "nom" : "Leuwers",
+      "prenom" : "Corentin"
+    }, {
+      "date_naissance" : "26/08/1997",
+      "idequipes" : 7,
+      "nom" : "Loridan",
+      "prenom" : "Thomas"
+    }, {
+      "date_naissance" : "09/07/1998",
+      "idequipes" : 7,
+      "nom" : "Mariage",
+      "prenom" : "Julien"
+    }, {
+      "date_naissance" : "20/01/2001",
+      "idequipes" : 7,
+      "nom" : "Marien",
+      "prenom" : "Valentin"
+    }, {
+      "date_naissance" : "02/11/1990",
+      "idequipes" : 7,
+      "nom" : "Mayolle",
+      "prenom" : "Nicolas"
+    }, {
+      "date_naissance" : "31/05/1995",
+      "idequipes" : 7,
+      "nom" : "Merchez",
+      "prenom" : "Alexis"
+    }, {
+      "date_naissance" : "02/07/1987",
+      "idequipes" : 7,
+      "nom" : "Merlet",
+      "prenom" : "Jeremy"
+    }, {
+      "date_naissance" : "25/06/1996",
+      "idequipes" : 7,
+      "nom" : "Parenty",
+      "prenom" : "Thomas"
+    }, {
+      "date_naissance" : "07/08/1995",
+      "idequipes" : 7,
+      "nom" : "Pocholle",
+      "prenom" : "Anthony"
+    }, {
+      "date_naissance" : "17/10/1989",
+      "idequipes" : 7,
+      "nom" : "Qallouh",
+      "prenom" : "Abdelmalik"
+    }, {
+      "date_naissance" : "15/02/1994",
+      "idequipes" : 7,
+      "nom" : "Saint-Pol",
+      "prenom" : "Antoine"
+    }, {
+      "date_naissance" : "10/09/1997",
+      "idequipes" :7,
+      "nom" : "Venel",
+      "prenom" : "Joris"
+    }, {
+      "date_naissance" : "26/08/2002",
+      "idequipes" : 7,
+      "nom" : "Bouchez",
+      "prenom" : "Corentin"
+    }, {
+      "date_naissance" : "14/04/2003",
+      "idequipes" : 7,
+      "nom" : "Lamaire",
+      "prenom" : "Noah"
+    }, {
+      "date_naissance" : "07/05/2004",
+      "idequipes" : 7,
+      "nom" : "Deroo",
+      "prenom" : "Jules"
+    }, {
+      "date_naissance" : "02/03/1984",
+      "idequipes" : 7,
+      "nom" : "Barrez",
+      "prenom" : "Vincent"
+    }, {
+      "date_naissance" : "30/01/1984",
+      "idequipes" : 7,
+      "nom" : "Delaporte",
+      "prenom" : "Gauthier"
+    }, {
+      "date_naissance" : "27/03/1984",
+      "idequipes" : 7,
+      "nom" : "Dhenin",
+      "prenom" : "William"
+    }, {
+      "date_naissance" : "19/12/1984",
+      "idequipes" : 7,
+      "nom" : "Guisse",
+      "prenom" : "Sebastien"
+    }, {
+      "date_naissance" : "10/03/1983",
+      "idequipes" : 7,
+      "nom" : "Lemoine",
+      "prenom" : "Laurent"
+    }, {
+      "date_naissance" : "24/09/1984",
+      "idequipes" : 7,
+      "nom" : "Leveque",
+      "prenom" : "Erwan"
+    }, {
+      "date_naissance" : "21/05/19884",
+      "idequipes" : 7,
+      "nom" : "Petit",
+      "prenom" : "Christophe"
+    }, {
+      "date_naissance" : "20/04/1985",
+      "idequipes" : 7,
+      "nom" : "Rackelboom",
+      "prenom" : "Nicolas"
+    }, {
+      "date_naissance" : "11/08/1983",
+      "idequipes" : 7,
+      "nom" : "Trinel",
+      "prenom" : "Sylvain"
+    }, {
+      "date_naissance" : "29/10/1984",
+      "idequipes" : 7,
+      "nom" : "Vincent",
+      "prenom" : "Christophe"
+    } ,
+     {
+      "date_naissance" : "03/10/2012",
+      "idequipes" : 4,
+      "nom" : "Allouchery",
+      "prenom" : "Aime"
+    }, {
+      "date_naissance" : "09/12/2012",
+      "idequipes" : 4,
+      "nom" : "Delbende",
+      "prenom" : "Robin"
+    }, {
+      "date_naissance" : "10/09/2012",
+      "idequipes" : 4,
+      "nom" : "Demaison",
+      "prenom" : "Josgua"
+    }, {
+      "date_naissance" : "23/08/2012",
+      "idequipes" : 4,
+      "nom" : "Gacquer",
+      "prenom" : "Mael"
+    }, {
+      "date_naissance" : "14/09/2012",
+      "idequipes" : 4,
+      "nom" : "Gheeraert",
+      "prenom" : "Axel"
+    }, {
+      "date_naissance" : "15/11/2012",
+      "idequipes" : 4,
+      "nom" : "Meziane",
+      "prenom" : "Sacha"
+    }, {
+      "date_naissance" : "11/01/2011",
+      "idequipes" : 4,
+      "nom" : "Charlet",
+      "prenom" : "Lucas"
+    }, {
+      "date_naissance" : "20/05/2011",
+      "idequipes" : 4,
+      "nom" : "Comble",
+      "prenom" : "Aubin"
+    }, {
+      "date_naissance" : "12/02/2011",
+      "idequipes" : 4,
+      "nom" : "Achour",
+      "prenom" : "Nael"
+    }, {
+      "date_naissance" : "18/01/2011",
+      "idequipes" : 4,
+      "nom" : "Crogiez",
+      "prenom" : "Blaise"
+    }, {
+      "date_naissance" : "01/05/2011",
+      "idequipes" : 4,
+      "nom" : "Beaucourt",
+      "prenom" : "Ylan"
+    }, {
+      "date_naissance" : "14/11/2011",
+      "idequipes" : 4,
+      "nom" : "Delattre",
+      "prenom" : "Lucas"
+    }, {
+      "date_naissance" : "06/07/2011",
+      "idequipes" : 4,
+      "nom" : "Lemoine",
+      "prenom" : "Tom"
+    }, {
+      "date_naissance" : "17/11/2011",
+      "idequipes" : 4,
+      "nom" : "Hannebicq",
+      "prenom" : "Marius"
+    }, {
+      "date_naissance" : "19/11/2011",
+      "idequipes" : 4,
+      "nom" : "Nayet",
+      "prenom" : "Sam"
+    }, {
+      "date_naissance" : "10/02/2011",
+      "idequipes" : 4,
+      "nom" : "Heniart",
+      "prenom" : "Noah"
+    } ,
+   {
+      "date_naissance" : "05/07/2010",
+      "idequipes" : 5,
+      "nom" : "Boulet",
+      "prenom" : "Timothe"
+    }, {
+      "date_naissance" : "08/01/2010",
+      "idequipes" : 5,
+      "nom" : "Queste",
+      "prenom" : "Jules"
+    }, {
+      "date_naissance" : "18/06/2010",
+      "idequipes" : 5,
+      "nom" : "Simon",
+      "prenom" : "Louis"
+    }, {
+      "date_naissance" : "04/12/2010",
+      "idequipes" : 5,
+      "nom" : "Pailleux",
+      "prenom" : "Enzo"
+    }, {
+      "date_naissance" : "02/09/2010",
+      "idequipes" : 5,
+      "nom" : "Blondel",
+      "prenom" : "Mathis"
+    }, {
+      "date_naissance" : "25/06/2009",
+      "idequipes" : 5,
+      "nom" : "Alglave Py",
+      "prenom" : "Gaspard"
+    }, {
+      "date_naissance" : "02/02/2009",
+      "idequipes" : 5,
+      "nom" : "Ammeux",
+      "prenom" : "Jean-Baptiste"
+    }, {
+      "date_naissance" : "27/12/2009",
+      "idequipes" : 5,
+      "nom" : "Cichocki",
+      "prenom" : "Nathan"
+    }, {
+      "date_naissance" : "27/11/2009",
+      "idequipes" : 5,
+      "nom" : "Delalieux",
+      "prenom" : "Axel"
+    }, {
+      "date_naissance" : "19/05/2009",
+      "idequipes" : 5,
+      "nom" : "Ferlin",
+      "prenom" : "Ethan"
+    }, {
+      "date_naissance" : "09/10/2009",
+      "idequipes" : 5,
+      "nom" : "Gunduz",
+      "prenom" : "Huseyin"
+    }, {
+      "date_naissance" : "31/07/2009",
+      "idequipes" : 5,
+      "nom" : "Marien",
+      "prenom" : "Norlan"
+    }, {
+      "date_naissance" : "28/09/2009",
+      "idequipes" : 5,
+      "nom" : "Paquet",
+      "prenom" : "Maxence"
+    }, {
+      "date_naissance" : "06/02/2009",
+      "idequipes" : 5,
+      "nom" : "Ryckewaert",
+      "prenom" : "Remy"
+    }, {
+      "date_naissance" : "13/07/2010",
+      "idequipes" : 5,
+      "nom" : "Nayet",
+      "prenom" : "Lola"
+    }, {
+      "date_naissance" : "09/03/2009",
+      "idequipes" : 5,
+      "nom" : "Marien",
+      "prenom" : "Athenais"
+    }, {
+      "date_naissance" : "05/08/2009",
+      "idequipes" : 5,
+      "nom" : "Ruckebusch",
+      "prenom" : "Nina"
+    } ,
+     {
+      "date_naissance" : "02/03/2008",
+      "idequipes" : 6,
+      "nom" : "Dave",
+      "prenom" : "Raphael"
+    }, {
+      "date_naissance" : "04/03/2008",
+      "idequipes" : 6,
+      "nom" : "Depledt",
+      "prenom" : "Quentin"
+    }, {
+      "date_naissance" : "07/11/2008",
+      "idequipes" : 6,
+      "nom" : "Laporte",
+      "prenom" : "Ewan"
+    }, {
+      "date_naissance" : "03/02/2008",
+      "idequipes" : 6,
+      "nom" : "Mastin",
+      "prenom" : "Matheo"
+    }, {
+      "date_naissance" : "07/10/2008",
+      "idequipes" : 6,
+      "nom" : "Meziane",
+      "prenom" : "Ilan"
+    }, {
+      "date_naissance" : "14/02/2008",
+      "idequipes" : 6,
+      "nom" : "Pattin",
+      "prenom" : "Cedric"
+    }, {
+      "date_naissance" : "17/11/2007",
+      "idequipes" : 6,
+      "nom" : "Cadart",
+      "prenom" : "Romain"
+    }, {
+      "date_naissance" : "05/10/2007",
+      "idequipes" : 6,
+      "nom" : "Cichocki",
+      "prenom" : "Thoams"
+    }, {
+      "date_naissance" : "21/05/2007",
+      "idequipes" : 6,
+      "nom" : "Covillers",
+      "prenom" : "Brandon"
+    }, {
+      "date_naissance" : "17/09/2007",
+      "idequipes" : 6,
+      "nom" : "Cruppe",
+      "prenom" : "Matheo"
+    }, {
+      "date_naissance" : "27/12/2007",
+      "idequipes" : 6,
+      "nom" : "Mare",
+      "prenom" : "Simon"
+    }, {
+      "date_naissance" : "24/04/2007",
+      "idequipes" : 6,
+      "nom" : "Ruckebusch",
+      "prenom" : "Theo"
+    }, {
+      "date_naissance" : "30/01/2008",
+      "idequipes" : 6,
+      "nom" : "Delbecque",
+      "prenom" : "Pamela"
+    }, {
+      "date_naissance" : "17/03/2006",
+      "idequipes" : 6,
+      "nom" : "Marien",
+      "prenom" : "Abigaelle"
+    } ,
+   {
+      "date_naissance" : "23/07/2015",
+      "idequipes" : 2,
+      "nom" : "Heniart",
+      "prenom" : "Baptiste"
+    }, {
+      "date_naissance" : "20/08/2015",
+      "idequipes" : 2,
+      "nom" : "Humetz",
+      "prenom" : "Robin"
+    }, {
+      "date_naissance" : "12/06/2015",
+      "idequipes" :2,
+      "nom" : "Ruyffelaere",
+      "prenom" : "Jules"
+    } ,
+    {
+      "date_naissance" : "06/11/2014",
+      "idequipes" : 3,
+      "nom" : "Averlant",
+      "prenom" : "Charly"
+    }, {
+      "date_naissance" : "09/11/2014",
+      "idequipes" : 3,
+      "nom" : "Derlot",
+      "prenom" : "Theo"
+    }, {
+      "date_naissance" : "19/08/2014",
+      "idequipes" : 3,
+      "nom" : "Pailleux",
+      "prenom" : "Nohe"
+    }, {
+      "date_naissance" : "07/01/2014",
+      "idequipes" : 3,
+      "nom" : "Paniez",
+      "prenom" : "Titouan"
+    }, {
+      "date_naissance" : "27/10/2014",
+      "idequipes" : 3,
+      "nom" : "Petit",
+      "prenom" : "Samuel"
+    }, {
+      "date_naissance" : "05/02/2013",
+      "idequipes" : 3,
+      "nom" : "Delmarquette",
+      "prenom" : "Lucas"
+    }, {
+      "date_naissance" : "26/11/2013",
+      "idequipes" : 3,
+      "nom" : "Josien",
+      "prenom" : "Raphael"
+    } ,
+    {
+      "date_naissance" : "07/02/1985",
+      "idequipes" : 8,
+      "nom" : "Baali",
+      "prenom" : "Zakaria"
+    }, {
+      "date_naissance" : "15/03/1983",
+      "idequipes" : 8,
+      "nom" : "Becquet",
+      "prenom" : "Loic"
+    }, {
+      "date_naissance" : "25/01/1975",
+      "idequipes" : 8,
+      "nom" : "Blarel",
+      "prenom" : "Christophe"
+    }, {
+      "date_naissance" : "19/08/1985",
+      "idequipes" : 8,
+      "nom" : "Buissart",
+      "prenom" : "Gaetan"
+    }, {
+      "date_naissance" : "05/03/1986",
+      "idequipes" : 8,
+      "nom" : "Decoopman",
+      "prenom" : "Anthony"
+    }, {
+      "date_naissance" : "23/07/1974",
+      "idequipes" : 8,
+      "nom" : "Delattre",
+      "prenom" : "Alain"
+    }, {
+      "date_naissance" : "18/09/1983",
+      "idequipes" : 8,
+      "nom" : "Delbende",
+      "prenom" : "Loic"
+    }, {
+      "date_naissance" : "17/05/1972",
+      "idequipes" : 8,
+      "nom" : "Gauduin",
+      "prenom" : "Michael"
+    }, {
+      "date_naissance" : "01/10/1984",
+      "idequipes" : 8,
+      "nom" : "Heniart",
+      "prenom" : "Julien"
+    }, {
+      "date_naissance" : "01/09/1985",
+      "idequipes" : 8,
+      "nom" : "Marien",
+      "prenom" : "Julien"
+    }, {
+      "date_naissance" : "22/05/1977",
+      "idequipes" : 8,
+      "nom" : "Marien",
+      "prenom" : "Marc"
+    }, {
+      "date_naissance" : "28/06/1986",
+      "idequipes" : 8,
+      "nom" : "Mastin",
+      "prenom" : "Michael"
+    }, {
+      "date_naissance" : "10/05/1975",
+      "idequipes" : 8,
+      "nom" : "Nayet",
+      "prenom" : "Stephane"
+    }, {
+      "date_naissance" : "28/08/1981",
+      "idequipes" : 8,
+      "nom" : "Pailleux",
+      "prenom" : "Frederic"
+    }, {
+      "date_naissance" : "11/07/1978",
+      "idequipes" : 8,
+      "nom" : "Paquet",
+      "prenom" : "Sebastien"
+    }, {
+      "date_naissance" : "26/04/1968",
+      "idequipes" : 8,
+      "nom" : "Vasseur",
+      "prenom" : "Didier"
+    } ]
+    

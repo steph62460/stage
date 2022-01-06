@@ -110,15 +110,22 @@ h2 {
     align-items: center;
 }
 
+.divLien {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(190, 44, 44);
+}
+
 .lien {
-    display: flex;
-    justify-content: flex-end;
+    color: rgb(190, 44, 44);
 }
 
 .photo {
     height: 100px;
     width: 100px;
 }
+
+ 
 /* Debut footer */
 
 .f2 {

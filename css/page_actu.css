@@ -108,6 +108,7 @@
   }
   /*---------------------------------------------------------fin header-----------------------------------------------------------------------*/
 
+
 .article {
 display: flex;
 flex-direction: column;
@@ -118,6 +119,7 @@ margin-top: 2%;
 
 .articles {
   text-align: center;
+  min-height: calc(100vh -  86px - 73.4px);
 }
 .photo {
   width: 500px;

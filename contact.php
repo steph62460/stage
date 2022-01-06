@@ -14,7 +14,7 @@
         <div class="adresse">
             <div class="fonc"><strong>Adresse du stade</strong>: <br>Rue de Lalleau 62350 Busnes</div>
             <div class="fonc"><strong>Adresse mail</strong> : <br>busnes.fc.548241@lfhf.fr</div>
-            <div class="fonc"><strong>Page Facebook</strong> : <br><a class="facebook" href="https://www.facebook.com/FootballClubDeBusnes" target="_blank">https://www.facebook.com/FootballClubDeBusnes</a></div>
+            <div class="fonc"><strong>Page Facebook</strong> : <br><a class="facebook" href="https://www.facebook.com/FootballClubDeBusnes" target="_blank" title="facebook du club" >https://www.facebook.com/FootballClubDeBusnes</a></div>
             <div class="organi">Organigramme du club</div>
             <div class="fonc"><strong>Président</strong> : <br>William Dhénin</div>
             <div class="fonc"><strong>Président adjoint</strong> : </div>

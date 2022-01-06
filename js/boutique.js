@@ -49,27 +49,6 @@ const paragr2 = document.createElement('p');
 paragr2.innerText = art.adulte;
 const paragr3 = document.createElement('p');
 paragr3.innerText = art.enfant;
-// const div2 = document.createElement('div');
-// div2.classList.add('button')
-// const btnAjout = document.createElement('button');
-// btnAjout.innerText = "Ajouter au Panier";
-// const btnSupp = document.createElement('button');
-// btnSupp.innerText = "Supprimer du Panier";
-// btnSupp.classList.add('buttonsupp');
-// btnSupp.addEventListener('click', () => {
-//     btnSupp.classList.add('buttonsupp');
-//     btnAjout.classList.remove('buttonsupp');
-//     removeArticleCart(art);
-//     priceCart();
-// });
-
-// btnAjout.addEventListener('click', () => {
-//     btnSupp.classList.remove('buttonsupp');
-//     btnAjout.classList.add('buttonsupp');
-//     addArticleCart(art);
-//     priceCart();
-// })
-
 
 a.appendChild(img);
 // div2.append(btnAjout, btnSupp)
@@ -77,39 +56,6 @@ div.append(a , title, paragr2, paragr3);
 return div;
 
 }
-
-// const addArticleCart = (art) => {
-//     panier.push(art);
-//     console.log(panier);
-//     span.classList.add('span')
-//     span.innerText =panier.length;
-//     insertCart(panier);
-// }
-//     // fonction suppression article au panier
-// const removeArticleCart = (art) => {
-//     let deleteArticle = panier.filter(value => value.id !== art.id);
-//     panier = deleteArticle;
-//     insertCart(panier);
-//     console.log(panier);
-//     if (panier.length !==0) {
-//         span.classList.add('span')
-//     span.innerText =panier.length;
-//     } else {
-//         span.classList.remove('span');
-//         span.innerText = "";
-//     }
-// };
-
-
-// const priceCart = () => {
-//     const total = panier.reduce((acc, value) => {
-//         acc += value.price;
-//         return acc;
-        
-// }, 0);
-// const total2 = parseFloat(total).toFixed(2);
-// console.log(total2);
-// };
 
 // // Fonction ajout panier a firebase
 
@@ -128,11 +74,10 @@ function insertCart(panier) {
 const panier2 = document.querySelector(".nav-item2");
 const span = document.createElement('span');
 const lien2 = document.createElement('a');
-lien2.href = "panier.html";
+lien2.href = "panier.php";
 const img2 = document.createElement("img");
 img2.src = "img/cart.png";
 img2.classList.add('panier')
-
 lien2.appendChild(img2);
 panier2.append(lien2, span);
 

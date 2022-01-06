@@ -132,11 +132,19 @@ a{
     color: black;
 }
 
+.groupe {
+  height: 200px;
+}
+
+.groupe2 {
+  height: 200px;
+}
+
 .gpp{
   display: flex;
   justify-content:space-around; 
   margin-top: 2%;
-  min-height: calc(100vh - 86px - 73.4px);
+  min-height: calc(100vh -  86px - 73.4px);
 }
 
 h3 {
