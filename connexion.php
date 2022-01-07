@@ -15,17 +15,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$password || !$email) {
         $error = "LES CHAMPS DOIVENT ETRE REMPLIS";
     } else {
-        $error = 'mdp ou mail invalide';
+        $error = 'Mot de passe et/ou email invalide';
         $statementUser = $pdo->prepare('SELECT * FROM users WHERE email = :email');
         $statementUser->bindValue(':email', $email);
         $statementUser->execute();
         $users = $statementUser->fetch();
         if($users && password_verify($password, $users['password'])) {
-            $statementSession = $pdo->prepare('INSERT INTO sesion VALUES(default, :id)');
+            $statementSession = $pdo->prepare('INSERT INTO session VALUES(default, :id)');
             $statementSession->bindValue(':id', $users['idusers']);
             $statementSession->execute();
             $sessionId = $pdo->lastInsertId();
-            setcookie('session', $sessionId, time() + 60 * 60, '','', false, true);
+            setcookie('session', $sessionId, time() + 60 * 3, '','', false, true);
             header('Location: /boutique.php');
         }
     }

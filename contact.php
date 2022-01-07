@@ -17,11 +17,11 @@
             <div class="fonc"><strong>Page Facebook</strong> : <br><a class="facebook" href="https://www.facebook.com/FootballClubDeBusnes" target="_blank" title="facebook du club" >https://www.facebook.com/FootballClubDeBusnes</a></div>
             <div class="organi">Organigramme du club</div>
             <div class="fonc"><strong>Président</strong> : <br>William Dhénin</div>
-            <div class="fonc"><strong>Président adjoint</strong> : </div>
+            <div class="fonc"><strong>Président adjoint</strong> : <br>Vincent Barrez</div>
             <div class="fonc"><strong>Secrétaire</strong> : <br>Jérémy Lesage</div>
-            <div class="fonc"><strong>Secrétaire adjoint</strong> : </div>
+            <div class="fonc"><strong>Secrétaire adjoint</strong> : <br>Béatrice Blarel </div>
             <div class="fonc"><strong>Trésorier</strong> : <br>Pierre Béron</div>
-            <div class="fonc"><strong>Trésorier adjoint</strong> : </div>
+            <div class="fonc"><strong>Trésorier adjoint</strong> : <br>Théo Hottelard</div>
         </div>
     </div>
 <p class="content">Contact entraîneur</p>

@@ -50,7 +50,7 @@ const divActu = document.createElement('div')
 const lien = document.createElement('a');
 
 divActu.classList.add("bactuinfo");
-lien.href= `page_actu.html?id=${article.id}&cat=articles`;
+lien.href= `page_actu.php?id=${article.id}&cat=articles`;
 lien.innerText =article.title;
 lien.style.color = "black";
 

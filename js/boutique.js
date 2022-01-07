@@ -35,27 +35,27 @@ fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/panier.json')
 }
 
 
-const createArticleElement = (art) => {
+// const createArticleElement = (art) => {
 
-const div = document.createElement('div');
-div.classList.add('article');
-const a = document.createElement('a');
-a.href = `article_boutique.php?id=${art.id}&cat=boutique`;
-const img = document.createElement('img');
-img.src = art.img;
-const title = document.createElement('h3');
-title.innerText = art.denomination;
-const paragr2 = document.createElement('p');
-paragr2.innerText = art.adulte;
-const paragr3 = document.createElement('p');
-paragr3.innerText = art.enfant;
+// const div = document.createElement('div');
+// div.classList.add('article');
+// const a = document.createElement('a');
+// a.href = `article_boutique.php?id=${art.id}&cat=boutique`;
+// const img = document.createElement('img');
+// img.src = art.img;
+// const title = document.createElement('h3');
+// title.innerText = art.denomination;
+// const paragr2 = document.createElement('p');
+// paragr2.innerText = art.adulte;
+// const paragr3 = document.createElement('p');
+// paragr3.innerText = art.enfant;
 
-a.appendChild(img);
-// div2.append(btnAjout, btnSupp)
-div.append(a , title, paragr2, paragr3);
-return div;
+// a.appendChild(img);
+// // div2.append(btnAjout, btnSupp)
+// div.append(a , title, paragr2, paragr3);
+// return div;
 
-}
+// }
 
 // // Fonction ajout panier a firebase
 
