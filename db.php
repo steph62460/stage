@@ -2,7 +2,7 @@
 
 $dns = "mysql:host=localhost;dbname=fcbusnes";
 $users = 'root';
-$password = '';
+$password = 'Louise150717+';
 
 try {
     $pdo = new PDO($dns, $users, $password, [
@@ -14,3 +14,4 @@ try {
 }
 
 return $pdo;
+    

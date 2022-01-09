@@ -15,7 +15,7 @@
       }, {
         "buteur1" : "Buteur: Nicolas Mayolle ⚽",
         "buteur2" : "",
-        "id" : "2",
+        "id" : 2,
         "img" : "img/seniors.jpg",
         "prochainAffiche" : "Retour du championnat ce week end, si le temps ne vient pas jouer les troubles fête. 🔴⚪🔴⚪",
         "score1" : "Score final : 1-3",
@@ -28,7 +28,7 @@
       }, {
         "buteur1" : "",
         "buteur2" : "",
-        "id" : "3",
+        "id" : 3,
         "img" : "img/u10-u11.jpg",
         "prochainAffiche" : "",
         "score1" : "Score final : 1-6",
@@ -41,7 +41,7 @@
       }, {
         "buteur1" : "",
         "buteur2" : "",
-        "id" : "4",
+        "id" : 4,
         "img" : "img/autres/u13-bellewarde.jpg",
         "prochainAffiche" : "",
         "score1" : "",
@@ -54,7 +54,7 @@
       }, {
         "buteur1" : "",
         "buteur2" : "",
-        "id" : "5",
+        "id" : 5,
         "img" : "img/u10-u11.jpg",
         "prochainAffiche" : "",
         "score1" : "La Roupie 1 - 1 Busnes",
@@ -67,7 +67,7 @@
       }, {
         "buteur1" : "Buteuse: Isabelle Montvoisin ⚽",
         "buteur2" : "",
-        "id" : "6",
+        "id" : 6,
         "img" : "img/feminines.jpg",
         "prochainAffiche" : "Prochain match, dimanche prochain avec le déplacement à Avion Cheminots pour la coupe féminines à 7. Forza FCB 🔴⚪🔴⚪",
         "score1" : "Lillers/Guarbecque - Busnes : 4-1",
@@ -80,7 +80,7 @@
       }, {
         "buteur1" : "Buteur: Samuel Edmont ⚽",
         "buteur2" : "",
-        "id" : "7",
+        "id" : 7,
         "img" : "img/seniors.jpg",
         "prochainAffiche" : "",
         "score1" : "Score final : 4-1 ❌",
@@ -93,7 +93,7 @@
       }, {
         "buteur1" : "Buteuse: Isabelle Montvoisin ⚽ ⚽Céline Willery ⚽ Isabelle Scotee ⚽",
         "buteur2" : "",
-        "id" : "8",
+        "id" : 8,
         "img" : "img/feminines.jpg",
         "prochainAffiche" : "Prochain match, dimanche prochain avec la réception de La Roupie pour la suite du championnat. Forza FCB  🔴⚪🔴⚪",
         "score1" : "Avion - Busnes : 1-4",
@@ -106,7 +106,7 @@
       }, {
         "buteur1" : "Buteur: CSC",
         "buteur2" : "",
-        "id" : "9",
+        "id" : 9,
         "img" : "img/seniors.jpg",
         "prochainAffiche" : "Bonne semaine à tous FORZA FCB 🔴⚪🔴⚪",
         "score1" : "Score final : 1-7 ❌",

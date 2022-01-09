@@ -17,41 +17,41 @@ const displayArticle = () => {
 
 }
 
-const app = document.querySelector('.actu')
+// const app = document.querySelector('.actu')
 
-const createArticle = (article) => {
-    const divActu = document.createElement('div');
-    const h2 = document.createElement('h2')
-    const divArticle = document.createElement('div')
-    const imgArticle = document.createElement('img');
-    const actu = document.createElement('p');
-    const lien = document.createElement('a')
+// const createArticle = (article) => {
+//     const divActu = document.createElement('div');
+//     const h2 = document.createElement('h2')
+//     const divArticle = document.createElement('div')
+//     const imgArticle = document.createElement('img');
+//     const actu = document.createElement('p');
+//     const lien = document.createElement('a')
 
-    divActu.classList.add('article');
-    h2.innerText = article.title;
+//     divActu.classList.add('article');
+//     h2.innerText = article.title;
 
-    divArticle.classList.add('flex');
-    imgArticle.classList.add('photo');
-    imgArticle.src = article.img;
-    actu.classList.add('texte1')
-    actu.innerText = article.texte1;
+//     divArticle.classList.add('flex');
+//     imgArticle.classList.add('photo');
+//     imgArticle.src = article.img;
+//     actu.classList.add('texte1')
+//     actu.innerText = article.texte1;
 
-    let date = new Date();
+//     let date = new Date();
 
-    const divLien = document.createElement('div');
-    divLien.classList.add('divLien')
-    const datePublication = document.createElement('p');
-    datePublication.innerHTML = 'Publié le ' + new Intl.DateTimeFormat('french', { dateStyle: 'long', timeStyle: 'medium' }).format(date); 
-    lien.classList.add('lien');
-    lien.href = `page_actu.php?id=${article.id}&cat=articles`;
-    lien.innerText = "Lire la suite";
+//     const divLien = document.createElement('div');
+//     divLien.classList.add('divLien')
+//     const datePublication = document.createElement('p');
+//     datePublication.innerHTML = 'Publié le ' + new Intl.DateTimeFormat('french', { dateStyle: 'long', timeStyle: 'medium' }).format(date); 
+//     lien.classList.add('lien');
+//     lien.href = `page_actu.php?id=${article.id}&cat=articles`;
+//     lien.innerText = "Lire la suite";
 
-    divLien.append(datePublication, lien)
-    divArticle.append(imgArticle, actu);
-    divActu.append(h2, divArticle, divLien);
+//     divLien.append(datePublication, lien)
+//     divArticle.append(imgArticle, actu);
+//     divActu.append(h2, divArticle, divLien);
 
-    return divActu;
-}
+//     return divActu;
+// }
 
 displayArticle();
 

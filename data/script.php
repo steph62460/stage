@@ -1,6 +1,6 @@
 <?php 
 
-$articles = json_decode(file_get_contents('../JSON/boutique.json'), true);
+$articles = json_decode(file_get_contents('../JSON/articles.json'), true);
 
 $dns = "mysql:host=localhost;dbname=fcbusnes";
 $users = 'root';
@@ -9,80 +9,44 @@ $password = 'Louise150717+';
 $pdo = new PDO($dns, $users, $password);
 
 $statement = $pdo->prepare('
-INSERT INTO boutique (
-    adulte,
-    denomination,
-    description,
-    enfant,
+INSERT INTO articles_actu (
+    buteur1,
+    buteur2,
     img,
-    optgroup,
-    optgroup2,
-    option1,
-    option2,
-    option3,
-    option4,
-    option5,
-    option6,
-    option7,
-    option8,
-    option9,
-    option10,
-    price,
-    price1,
-    price2,
-    qte,
-    taille,
+    prochainAffiche,
+    score1,
+    score2,
+    texte1,
+    texte2,
+    title,
+    date,
     visibility
 ) VALUES (
-    :adulte,
-    :denomination,
-    :description,
-    :enfant,
+    :buteur1,
+    :buteur2,
     :img,
-    :optgroup,
-    :optgroup2,
-    :option1,
-    :option2,
-    :option3,
-    :option4,
-    :option5,
-    :option6,
-    :option7,
-    :option8,
-    :option9,
-    :option10,
-    :price,
-    :price1,
-    :price2,
-    :qte,
-    :taille,
+    :prochainAffiche,
+    :score1,
+    :score2,
+    :texte1,
+    :texte2,
+    :title,
+    :date,
     :visibility
 )
 ');
 
 foreach ($articles as $a) {
-    $statement->bindValue(':adulte', $a['adulte']);
-    $statement->bindValue(':denomination', $a['denomination']);
-    $statement->bindValue(':description', $a['description']);
-    $statement->bindValue(':enfant', $a['enfant']);
+    $statement->bindValue(':buteur1', $a['buteur1']);
+    $statement->bindValue(':buteur2', $a['buteur2']);
     $statement->bindValue(':img', $a['img']);
-    $statement->bindValue(':optgroup', $a['optgroup']);
-    $statement->bindValue(':optgroup2', $a['optgroup2']);
-    $statement->bindValue(':option1', $a['option1']);
-    $statement->bindValue(':option2', $a['option2']);
-    $statement->bindValue(':option3', $a['option3']);
-    $statement->bindValue(':option4', $a['option4']);
-    $statement->bindValue(':option5', $a['option5']);
-    $statement->bindValue(':option6', $a['option6']);
-    $statement->bindValue(':option7', $a['option7']);
-    $statement->bindValue(':option8', $a['option8']);
-    $statement->bindValue(':option9', $a['option9']);
-    $statement->bindValue(':option10', $a['option10']);
-    $statement->bindValue(':price', $a['price']);
-    $statement->bindValue(':price1', $a['price1']);
-    $statement->bindValue(':price2', $a['price2']);
-    $statement->bindValue(':qte', $a['qte']);
-    $statement->bindValue(':taille', $a['taille']);
+    $statement->bindValue(':prochainAffiche', $a['prochainAffiche']);
+    $statement->bindValue(':score1', $a['score1']);
+    $statement->bindValue(':score2', $a['score2']);
+    $statement->bindValue(':texte1', $a['texte1']);
+    $statement->bindValue(':texte2', $a['texte2']);
+    $statement->bindValue(':title', $a['title']);
+    $statement->bindValue(':date', $a['date']);
     $statement->bindValue(':visibility', $a['visibility']);
     $statement->execute();
 };

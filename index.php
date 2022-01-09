@@ -1,10 +1,10 @@
 <?php
 
 
-$pdo = require_once './db.php';
+// $pdo = require_once './db.php';
 
-$statement = $pdo->prepare('SELECT * FROM articles');
-$statement->execute();
+// $statement = $pdo->prepare('SELECT * FROM articles');
+// $statement->execute();
 
 ?>
 
