@@ -14,11 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_input['email'] ?? '';
     $nom = $_input['nom'] ?? '';
     $prenom = $_input['prenom'] ?? '';
+    
     $password = $_POST['password'] ?? '';
 
     if (!$email || !$nom || !$prenom || !$password) {
         $error = "Les champs doivent être remplis";
     } else {
+        
         $hashPassword = password_hash($password, PASSWORD_ARGON2I);
         $statement = $pdo->prepare ('INSERT INTO users VALUES (
             DEFAULT,
@@ -57,21 +59,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="formulaire">
         
         <form action="/inscription.php" method="POST">
+            <div class="cadre">
+                <div>
             <h2>INSCRIPTION</h2>
             <p>Nom</p>
             <input type="text" name="nom" placeholder="Nom">
             <p>Prenom</p>
             <input type="text" name="prenom" placeholder="Prenom">
             <p>Email</p>
-            <input type="text" name="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Email">
             <p>Mot de passe</p>
             <input type="password" name="password" placeholder="Password">
-
             <?php if($error) : ?>
                 <h1><?= $error ?></h1>
             <?php endif ;?>
-
+        </div>
             <button type="submit">S'inscrire</button>
+        </div>
         </form>
     </div>
 </center>

@@ -3,13 +3,13 @@ const btnBoutique = document.querySelector('#boutique');
 const btnEquipe = document.querySelector('#equipes');
 
 btnActu.addEventListener('click', () =>{
-    location.assign("admin-actu.html")
+    location.assign("admin-actu.php")
 })
 
 btnBoutique.addEventListener('click', () =>{
-    location.assign("admin-boutique.html")
+    location.assign("admin-boutique.php")
 })
 
 btnEquipe.addEventListener('click', () =>{
-    location.assign("admin-equipes.html")
+    location.assign("admin-equipes.php")
 })

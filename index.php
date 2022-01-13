@@ -1,3 +1,15 @@
+<?php
+
+
+$pdo = require_once './db.php';
+
+$stateIndex = $pdo->prepare('SELECT * FROM articles_actu');
+$stateIndex->execute();
+$index=$stateIndex->fetchAll();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -48,6 +60,11 @@
 
             <div class="bactu">
                 <h2>ACTUALITÉ</h2>
+                <?php foreach ($index as $i) : ?>
+                <div class="bactuinfo">
+                    <a class="lien" href="page_actu.php?id=<?=$i['id']?>&cat=articles"><?= $i['title']?></a>
+                    </div>
+                    <?php endforeach; ?>
             </div>
 
         </div>

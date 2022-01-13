@@ -1,6 +1,6 @@
 <?php
 
-$pdo = require_once './db.php';
+$pdo = require './db.php';
 
 $stateTeam = $pdo->prepare('SELECT * FROM equipes');
 $stateTeam->execute();

@@ -1,58 +1,58 @@
-let equipes = []
-let equipes2 = []
+// let equipes = []
+// let equipes2 = []
 
-const displayEquipes = () => {
-    const users = fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/equipes.json')
-        .then(async response => {
-            try {
-                const equipes = await response.json();
-                console.log(Object.entries(equipes));
-                console.log(Object.keys(equipes));
-                let tabEquipe = Object.entries(equipes);
-                let tabEquipe2 = Object.keys(equipes);
-                for (let i=0; i < tabEquipe.length; i++) {
-                    console.log(tabEquipe[i][1][0]);
-                    equipes2.push(tabEquipe[i][1][0])
-                    console.log(equipes2);
-                }
-                for (let i=0; i < tabEquipe2.length; i++) {
-                    console.log(tabEquipe2[i]);
-                    equipes2[i].type = tabEquipe2[i]
-                    // equipes2.push(tabEquipe[i][1][0])
-                    console.log(equipes2);
-                }
-                let newEquipes = equipes2.sort((par1, par2) => par1.cle - par2.cle)
-                const equipesNode = newEquipes.map((equipe) => {
-                return createEquipes(equipe)
-                });
-    team.append(...equipesNode)
-    } catch(e) {
-    console.log(e);
-    }
-        })
+// const displayEquipes = () => {
+//     const users = fetch('https://fcbusnes-3cc17-default-rtdb.firebaseio.com/equipes.json')
+//         .then(async response => {
+//             try {
+//                 const equipes = await response.json();
+//                 console.log(Object.entries(equipes));
+//                 console.log(Object.keys(equipes));
+//                 let tabEquipe = Object.entries(equipes);
+//                 let tabEquipe2 = Object.keys(equipes);
+//                 for (let i=0; i < tabEquipe.length; i++) {
+//                     console.log(tabEquipe[i][1][0]);
+//                     equipes2.push(tabEquipe[i][1][0])
+//                     console.log(equipes2);
+//                 }
+//                 for (let i=0; i < tabEquipe2.length; i++) {
+//                     console.log(tabEquipe2[i]);
+//                     equipes2[i].type = tabEquipe2[i]
+//                     // equipes2.push(tabEquipe[i][1][0])
+//                     console.log(equipes2);
+//                 }
+//                 let newEquipes = equipes2.sort((par1, par2) => par1.cle - par2.cle)
+//                 const equipesNode = newEquipes.map((equipe) => {
+//                 return createEquipes(equipe)
+//                 });
+//     team.append(...equipesNode)
+//     } catch(e) {
+//     console.log(e);
+//     }
+//         })
 
-}
+// }
 
-const team = document.querySelector('.boutique')
+// const team = document.querySelector('.boutique')
 
-const createEquipes = (equipe) => {
+// const createEquipes = (equipe) => {
 
-    const div = document.createElement('div');
-    div.classList.add('article');
-    const title = document.createElement('h3');
-    title.innerText = equipe.title;
-    const lienEquipe = document.createElement('a');
-    lienEquipe.href = `equipe-liste.php?cat=equipes&souscat=${equipe.type}`;
-    const img = document.createElement('img');
-    img.src = equipe.img;
+//     const div = document.createElement('div');
+//     div.classList.add('article');
+//     const title = document.createElement('h3');
+//     title.innerText = equipe.title;
+//     const lienEquipe = document.createElement('a');
+//     lienEquipe.href = `equipe-liste.php?cat=equipes&souscat=${equipe.type}`;
+//     const img = document.createElement('img');
+//     img.src = equipe.img;
 
-    lienEquipe.appendChild(img);
-    div.append(title, lienEquipe)
+//     lienEquipe.appendChild(img);
+//     div.append(title, lienEquipe)
 
-    return div
-}
+//     return div
+// }
 
-displayEquipes();
+// displayEquipes();
 
 const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav-menu");

@@ -25,13 +25,6 @@ const app = initializeApp(firebaseConfig);
 
 let articles = [];
 
-const btnReturn = document.querySelector('.button2');
-
-btnReturn.addEventListener('click' , (event) => {
-    event.preventDefault();
-    location.assign("index_admin.html")
-})
-
           // REFERENCES
           let idb = document.querySelector("#idB");
           let titleb = document.querySelector("#titleB");
@@ -44,7 +37,6 @@ btnReturn.addEventListener('click' , (event) => {
           let buteur2b = document.querySelector("#buteur2B");
           let prochainAfficheb = document.querySelector("#prochainAfficheB");
           let visibilityb = document.querySelector("#visibilityB")
-
           let insertBtn = document.querySelector("#insert");
           let selectAllBtn = document.querySelector("#selectAll");
           // FUNCTION INSERT

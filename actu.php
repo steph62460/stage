@@ -1,10 +1,11 @@
 <?php
 
-$articleDb = require __DIR__ . './database/models/databaseActu.php';
-$articles = $articleDb->fetchAllArticle();
 
-$_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$pdo = require './db.php';
 
+$stateActu = $pdo->prepare('SELECT * FROM articles_actu');
+$stateActu->execute();
+$actus=$stateActu->fetchAll();
 
 ?>
 
@@ -21,8 +22,8 @@ $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     <h1>ACTUALITES</h1>
 
     <div class="actu">
+        <?php foreach ($actus as $a) : ?>
         <div class="article">
-            <?php foreach ($articles as $a) : ?>
             <h2><?= $a['title'] ?></h2>
             <div class="flex">
                 <img  class="photo"src="<?= $a['img'] ?>" alt="">

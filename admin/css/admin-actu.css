@@ -79,5 +79,9 @@ tr {
 .button2 {
     width: 200px;
     background-color: rgb(190, 44, 44);
+}
+
+.return {
     color: white;
+    text-decoration: none;
 }

@@ -1,5 +1,4 @@
 <?php
 
-$passAdmin = "123";
-
+$passAdmin = "Fcbusnes62@";
 return $passAdmin;

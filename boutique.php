@@ -3,10 +3,10 @@
 $pdo = require './isLoggedIn.php';
 $user = isLoggedIn();
 
-$articleDb = require_once __DIR__ . './database/models/database.php';
-$articles = $articleDb->fetchAllArticle();
-
-$_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$pdo2 = require './db.php';
+$stateBoutique = $pdo2->prepare('SELECT * FROM boutique');
+$stateBoutique->execute();
+$boutique=$stateBoutique->fetchAll();
 
 
 ?> 
@@ -32,8 +32,8 @@ $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     </div>
     <h2>Boutique officielle du Football Club de Busnes</h2>
         <div class="boutique">
+            <?php foreach ($boutique as $a) : ?>
             <div class="article">
-            <?php foreach ($articles as $a) : ?>
                 <a href="article_boutique.php?id=<?= $a['id'] ?>&cat=boutique"><img src="<?= $a['img'] ?>" alt=""></a>
                 <h3><?= $a['denomination'] ?></h3>
                 <p><?= $a['adulte'] ?></p>
@@ -44,4 +44,3 @@ $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 <?php require_once "./php/includes/footer.php" ?>
 </body>
 </html>
-<script src="js/boutique.js" type="module"></script>

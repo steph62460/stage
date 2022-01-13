@@ -27,11 +27,6 @@ body {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-}
 
 button {
     width: 300px;
@@ -44,3 +39,24 @@ button {
     cursor: pointer;
 }
 
+.connexion {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logout {
+    text-decoration: none;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.date {
+    display: flex;
+}
