@@ -20,6 +20,7 @@ $boutique=$stateBoutique->fetchAll();
 
 <body>
     <?php require_once "./php/includes/header_boutique.php" ?>
+    <div class="test">
     <div class="connexion">
         <?php if($user) : ?>
             <div>
@@ -41,6 +42,7 @@ $boutique=$stateBoutique->fetchAll();
             </div>
             <?php endforeach; ?>
         </div>
+    </div>
 <?php require_once "./php/includes/footer.php" ?>
 </body>
 </html>

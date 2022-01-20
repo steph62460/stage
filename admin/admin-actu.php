@@ -14,20 +14,18 @@ if ($selectAll) {
 
 if ($editOne) {
     $oneActu = $actuDb->fetchArticle($editOne);
-    echo "<pre>";
-    var_dump($oneActu);
-    echo "</pre>";
-    $idArticle = $oneActu['id'];
     $title = $oneActu['title'];
+    $img = $oneActu['img'];
+    $texte1 = $oneActu['texte1'];
+    $score1 = $oneActu['score1'];
+    $buteur1 = $oneActu['buteur1'];
+    $texte2 = $oneActu['texte2'];
+    $score2 = $oneActu['score2'];
+    $buteur2 = $oneActu['buteur2'];
+    $prochainMatch = $oneActu['prochainAffiche'];
     $visibility = $oneActu['visibility'];
 }
-// echo "<pre>";
-// var_dump($article);
-// echo "</pre>";
-// die();
-// $idArticle = $article['id'];
-// $title = $article['title'];
-// $visibility = $article['visibility'];
+
 
 ?>
 
@@ -47,19 +45,19 @@ if ($editOne) {
     <div>
         <div class="admin">
             <h1>Page Admin Actu</h1>
-            <label for="">Title:</label><input type="text" id="titleB" value="<?= $title ?? '' ?>">
-            <label for="">Image:</label><input type="text" id="imgB">
-            <label for="">Résumé Equipe1:</label><input type="text" id="texte1B">
-            <label for="">Score Equipe1: </label><input type="text" id="score1B" placeholder="Score final: ">
-            <label for="">Buteurs:</label><input type="text" id="buteur1B" placeholder="Buteurs: ">
-            <label for="">Résumé Equipe2 :</label><input type="text" id="texte2B">
-            <label for="">Score Equipe2: </label><input type="text" id="score2B" placeholder="Score final: ">
-            <label for="">Buteurs:</label><input type="text" id="buteur2B" placeholder="Buteurs: ">
-            <label for="">Prochaines rencontres:</label><input type="text" id="prochainAfficheB">
-            <label for="">Visibilité:</label><input type="text" id="visibilityB" placeholder=" mettre true pour afficher, mettre false si on n'affiche pas l'article">
+            <label for="">Title:</label><input type="text" value="<?= $title ?? '' ?>">
+            <label for="">Image:</label><input type="text" value="<?= $img ?? '' ?>">
+            <label for="">Résumé Equipe1:</label><input type="text" value="<?= $texte1 ?? '' ?>">
+            <label for="">Score Equipe1: </label><input type="text" placeholder="Score final: " value="<?= $score1 ?? '' ?>">
+            <label for="">Buteurs:</label><input type="text" placeholder="Buteurs: " value="<?= $buteur1 ?? '' ?>">
+            <label for="">Résumé Equipe2 :</label><input type="text" value="<?= $texte2 ?? '' ?>">
+            <label for="">Score Equipe2: </label><input type="text" placeholder="Score final: " value="<?= $score2 ?? '' ?>">
+            <label for="">Buteurs:</label><input type="text" placeholder="Buteurs: " value="<?= $buteur2 ?? '' ?>">
+            <label for="">Prochaines rencontres:</label><input type="text" value="<?= $prochainMatch ?? '' ?>">
+            <label for="">Visibilité:</label><input type="text" value="<?= $visibility ?? '' ?>" placeholder=" mettre true pour afficher, mettre false si on n'affiche pas l'article">
             <div class="button">
-                <button id="insert">INSERT</button>
-                <a href="./admin-actu.php?select=ok" name="id">SELECT ALL</a>
+                <button><a href="./admin-actu.php?insert" name="insert"><?= $id ? "UPDATE" :"INSERT" ?></a></button>
+                <button><a href="./admin-actu.php?select=ok" name="id" >SELECT ALL</a></button>
             </div>
         </div>
         <table class="table">
@@ -75,11 +73,11 @@ if ($editOne) {
             <tbody>
                 <?php foreach ($article as $a) : ?>
                     <tr>
-                        <th><?= $a['id'] ?></th>
-                        <th><?= $a['title'] ?></th>
-                        <th><?= $a['visibility'] ?></th>
-                        <th><a href="./admin-actu.php?edit=<?= $a['id'] ?>" name="id">EDITER</a></th>
-                        <th><button class="delete">Delete</button></th>
+                        <td><?= $a['id'] ?></td>
+                        <td><?= $a['title'] ?></td>
+                        <td><?= $a['visibility'] ?></td>
+                        <td><button class="edit"><a href="./admin-actu.php?edit=<?= $a['id'] ?>" name="id">EDITER</a></button></td>
+                        <td><button class="delete">Delete</button></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

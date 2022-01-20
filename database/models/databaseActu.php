@@ -103,6 +103,7 @@ class ActuDatabase {
         $this->stateUpdate->bindValue(':title', $article['title']);
         $this->stateUpdate->bindValue(':date', $article['date']);
         $this->stateUpdate->bindValue(':visibility', $article['visibility']);
+        $this->stateUpdate->execute();
         return $article;
     }
 
