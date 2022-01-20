@@ -6,6 +6,7 @@ $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $id = $_GET['id'] ?? '';
 $selectAll = $_GET['select'] ?? '';
 $editOne = $_GET['edit'] ?? '';
+setcookie('id', $editOne, time() + 60 * 60, '', '', false, true);
 $article = [];
 
 if ($selectAll) {
@@ -26,6 +27,45 @@ if ($editOne) {
     $visibility = $oneActu['visibility'];
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_COOKIE['id'] ?? '';
+    if ($id) {
+        // echo "ok";
+        // die();
+        // $id = $_COOKIE['id'] ?? '';
+        $article['id'] = $id;
+        $article['title'] = $_POST['title'];
+        $article['img'] = $_POST['img'];
+        $article['texte1'] = $_POST['texte1'];
+        $article['score1'] = $_POST['score1'];
+        $article['buteur1'] = $_POST['buteur1'];
+        $article['texte2'] = $_POST['texte2'];
+        $article['score2'] = $_POST['score2'];
+        $article['buteur2'] = $_POST['buteur2'];
+        $article['prochainAffiche'] = $_POST['prochainAffiche'];
+        $article['date'] = time();
+        $article['visibility'] = $_POST['visibility'];
+        // var_dump($article);
+        // die();
+        $actuDb->updateArticle($article);
+    } else {
+        // echo "ko";
+        // die();
+        $article['title'] = $_POST['title'];
+        $article['img'] = $_POST['img'];
+        $article['texte1'] = $_POST['texte1'];
+        $article['score1'] = $_POST['score1'];
+        $article['buteur1'] = $_POST['buteur1'];
+        $article['texte2'] = $_POST['texte2'];
+        $article['score2'] = $_POST['score2'];
+        $article['buteur2'] = $_POST['buteur2'];
+        $article['prochainAffiche'] = $_POST['prochainAffiche'];
+        $article['date'] = time();
+        $article['visibility'] = $_POST['visibility'];
+        $actuDb->createArticle($article);
+    }
+}
+
 
 ?>
 
@@ -43,23 +83,27 @@ if ($editOne) {
 
 <body>
     <div>
-        <div class="admin">
-            <h1>Page Admin Actu</h1>
-            <label for="">Title:</label><input type="text" value="<?= $title ?? '' ?>">
-            <label for="">Image:</label><input type="text" value="<?= $img ?? '' ?>">
-            <label for="">Résumé Equipe1:</label><input type="text" value="<?= $texte1 ?? '' ?>">
-            <label for="">Score Equipe1: </label><input type="text" placeholder="Score final: " value="<?= $score1 ?? '' ?>">
-            <label for="">Buteurs:</label><input type="text" placeholder="Buteurs: " value="<?= $buteur1 ?? '' ?>">
-            <label for="">Résumé Equipe2 :</label><input type="text" value="<?= $texte2 ?? '' ?>">
-            <label for="">Score Equipe2: </label><input type="text" placeholder="Score final: " value="<?= $score2 ?? '' ?>">
-            <label for="">Buteurs:</label><input type="text" placeholder="Buteurs: " value="<?= $buteur2 ?? '' ?>">
-            <label for="">Prochaines rencontres:</label><input type="text" value="<?= $prochainMatch ?? '' ?>">
-            <label for="">Visibilité:</label><input type="text" value="<?= $visibility ?? '' ?>" placeholder=" mettre true pour afficher, mettre false si on n'affiche pas l'article">
-            <div class="button">
-                <button><a href="./admin-actu.php?insert" name="insert"><?= $id ? "UPDATE" :"INSERT" ?></a></button>
-                <button><a href="./admin-actu.php?select=ok" name="id" >SELECT ALL</a></button>
+        <form action="/admin/admin-actu.php" method="POST">
+            <div class="admin">
+
+                <h1>Page Admin Actu</h1>
+                <label for="">Title:</label><input type="text" name="title" value="<?= $title ?? '' ?>">
+                <label for="">Image:</label><input type="text" name="img" value="<?= $img ?? '' ?>">
+                <label for="">Résumé Equipe1:</label><input type="text" name="texte1" value="<?= $texte1 ?? '' ?>">
+                <label for="">Score Equipe1: </label><input type="text" name="score1" placeholder="Score final: " value="<?= $score1 ?? '' ?>">
+                <label for="">Buteurs:</label><input type="text" name="buteur1" placeholder="Buteurs: " value="<?= $buteur1 ?? '' ?>">
+                <label for="">Résumé Equipe2 :</label><input type="text" name="texte2" value="<?= $texte2 ?? '' ?>">
+                <label for="">Score Equipe2: </label><input type="text" name="score2" placeholder="Score final: " value="<?= $score2 ?? '' ?>">
+                <label for="">Buteurs:</label><input type="text" name="buteur2" placeholder="Buteurs: " value="<?= $buteur2 ?? '' ?>">
+                <label for="">Prochaines rencontres:</label><input type="text" name="prochainAffiche" value="<?= $prochainMatch ?? '' ?>">
+                <label for="">Visibilité:</label><input type="text" name="visibility" value="<?= $visibility ?? '' ?>" placeholder=" mettre true pour afficher, mettre false si on n'affiche pas l'article">
+                <div class="button">
+                    <button><?= $editOne ? "UPDATE" : "INSERT" ?></button>
+                    <button type="button"><a href="./admin-actu.php?select=ok" name="id">SELECT ALL</a></button>
+                </div>
+
             </div>
-        </div>
+        </form>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -73,9 +117,9 @@ if ($editOne) {
             <tbody>
                 <?php foreach ($article as $a) : ?>
                     <tr>
-                        <td><?= $a['id'] ?></td>
-                        <td><?= $a['title'] ?></td>
-                        <td><?= $a['visibility'] ?></td>
+                        <td><?= $a['id'] ?? '' ?></td>
+                        <td><?= $a['title'] ?? '' ?></td>
+                        <td><?= $a['visibility'] ?? '' ?></td>
                         <td><button class="edit"><a href="./admin-actu.php?edit=<?= $a['id'] ?>" name="id">EDITER</a></button></td>
                         <td><button class="delete">Delete</button></td>
                     </tr>

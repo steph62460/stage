@@ -2,7 +2,8 @@
 
 $pdo = require  __DIR__ .  '/../../db.php';
 
-class ActuDatabase {
+class ActuDatabase
+{
 
     private PDOStatement $stateCreate;
     private PDOStatement $stateUpdate;
@@ -39,7 +40,7 @@ class ActuDatabase {
             :visibility
         )
         ');
-    
+
         $this->stateUpdate = $pdo->prepare('
             UPDATE articles_actu
             SET
@@ -55,7 +56,7 @@ class ActuDatabase {
             date=:date,
             visibility=:visibility
             WHERE id=:id
-        '); 
+        ');
 
         $this->stateRead = $pdo->prepare('SELECT * FROM articles_actu WHERE id=:id');
 
@@ -64,18 +65,21 @@ class ActuDatabase {
         $this->stateDelete = $pdo->prepare('DELETE FROM articles_actu WHERE id=:id');
     }
 
-    public function fetchAllArticle() {
+    public function fetchAllArticle()
+    {
         $this->stateReadAll->execute();
         return $this->stateReadAll->fetchAll();
     }
 
-    public function fetchArticle(int $id){
+    public function fetchArticle(int $id)
+    {
         $this->stateRead->bindValue(':id', $id);
         $this->stateRead->execute();
         return $this->stateRead->fetch();
     }
 
-    public function createArticle($article) {
+    public function createArticle($article)
+    {
         $this->stateCreate->bindValue(':buteur1', $article['buteur1']);
         $this->stateCreate->bindValue(':buteur2', $article['buteur2']);
         $this->stateCreate->bindValue(':img', $article['img']);
@@ -85,13 +89,14 @@ class ActuDatabase {
         $this->stateCreate->bindValue(':texte1', $article['texte1']);
         $this->stateCreate->bindValue(':texte2', $article['texte2']);
         $this->stateCreate->bindValue(':title', $article['title']);
-        $this->stateCreate->bindValue(':date', $article['date']);
+        $this->stateCreate->bindValue(':date', time());
         $this->stateCreate->bindValue(':visibility', $article['visibility']);
         $this->stateCreate->execute();
         return $this->fetchArticle($this->pdo->lastInsertId());
     }
 
-    public function updateArticle($article) {
+    public function updateArticle($article)
+    {
         $this->stateUpdate->bindValue(':buteur1', $article['buteur1']);
         $this->stateUpdate->bindValue(':buteur2', $article['buteur2']);
         $this->stateUpdate->bindValue(':img', $article['img']);
@@ -101,13 +106,15 @@ class ActuDatabase {
         $this->stateUpdate->bindValue(':texte1', $article['texte1']);
         $this->stateUpdate->bindValue(':texte2', $article['texte2']);
         $this->stateUpdate->bindValue(':title', $article['title']);
-        $this->stateUpdate->bindValue(':date', $article['date']);
+        $this->stateUpdate->bindValue(':date', time());
         $this->stateUpdate->bindValue(':visibility', $article['visibility']);
+        $this->stateUpdate->bindValue(':id', $article['id']);
         $this->stateUpdate->execute();
         return $article;
     }
 
-    public function deleteArticle(int $id) {
+    public function deleteArticle(int $id)
+    {
         $this->stateDelete->bindValue(':id', $id);
         $this->stateDelete->execute();
         return $id;

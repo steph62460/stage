@@ -13,12 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $email = $_input['email'] ?? '';
     $password = $_POST['password'] ?? '';
-    
+
     if (!$password || !$email) {
         $error = "LES CHAMPS DOIVENT ETRE REMPLIS";
     } else {
         $error = 'Mot de passe et/ou email invalide';
-        
+
         $statementUser = $pdo->prepare('SELECT * FROM users WHERE email = :email');
         $statementUser->bindValue(':email', $email);
         $statementUser->execute();
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $statementSession->bindValue(':id', $users['idusers']);
                 $statementSession->execute();
                 $sessionId = $pdo->lastInsertId();
-                setcookie('session', $sessionId, time() + 60 * 3, '', '', false, true);
+                setcookie('session', $sessionId, time() + 60 * 10, '', '', false, true);
                 header('Location: ./admin/index_admin.php');
             } else {
                 $statementSession = $pdo->prepare('INSERT INTO session VALUES(default, :id)');
@@ -67,24 +67,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form action="/connexion.php" method="POST">
                 <div class="cadre">
                     <div>
-                <h2>SE CONNECTER</h2>
-                <p class="text">Email</p>
-                <input type="text" name="email" placeholder="email">
-                <p class="text">Mot de passe</p>
-                <input type="password" name="password" placeholder="password">
-                </div>
-                <a href="#" class="oubliemdp">Mot de passe oublié?</a>
-                <?php if ($error) : ?>
-                    <h1><?= $error ?></h1>
-                <?php endif; ?>
-                <div class="checkbox">
-                    <input type="checkbox">
-                    <p class="connecte">Restez connectez</p>
-                </div>
-                <a class="inscrip" href="inscription.php">Pas encore inscrit ? Inscrivez-vous ici</a>
+                        <h2>SE CONNECTER</h2>
+                        <p class="text">Email</p>
+                        <input type="text" name="email" placeholder="email">
+                        <p class="text">Mot de passe</p>
+                        <input type="password" name="password" placeholder="password">
+                    </div>
+                    <a href="#" class="oubliemdp">Mot de passe oublié?</a>
+                    <?php if ($error) : ?>
+                        <h1><?= $error ?></h1>
+                    <?php endif; ?>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <p class="connecte">Restez connectez</p>
+                    </div>
+                    <a class="inscrip" href="inscription.php">Pas encore inscrit ? Inscrivez-vous ici</a>
 
-                <button type="submit">Connexion</button>
-            </div>
+                    <button type="submit">Connexion</button>
+                </div>
             </form>
         </div>
     </center>
