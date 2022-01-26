@@ -34,6 +34,11 @@ button {
     border-radius: 30px;
 } 
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .button {
     display: flex;
     flex-direction: row;
@@ -80,4 +85,36 @@ tr {
     width: 200px;
     background-color: rgb(190, 44, 44);
     color: white;
+}
+
+
+.img {
+    height: 80px;
+    width: 80px;
+}
+
+.option {
+    display: flex;
+}
+
+.nameOption {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+.taille {
+    display: flex;
+    flex-direction: row;
+}
+
+.tailles {
+    width: 50px;
+}
+
+.price {
+    width: 150px;
+}
+
+.price2 {
+    width: 200px;
 }

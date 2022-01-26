@@ -18,8 +18,11 @@
                 <a href="contact.php" class="nav-link">Contact</a>
             </li>
             <li class="nav-item">
+                    <a href="connexion.php" class="nav-link"><img clas="login" src="../../img/connexion.jpg" alt=""></a>
+                </li>
+            <li class="nav-item">
                 <div class="nav-item2"></div>
-                <!-- <a href="connexion.html"><img src="img/cart.png" alt="" height="50px"></a> -->
+                <a href="panier.php"><img src="img/cart.png" alt="" height="50px"></a>
             </li>
         </ul>
         <div class="hamburger">

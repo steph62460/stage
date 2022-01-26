@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $article['score2'] = $_POST['score2'];
         $article['buteur2'] = $_POST['buteur2'];
         $article['prochainAffiche'] = $_POST['prochainAffiche'];
-        $article['date'] = time();
+        $article['date'] = new DateTime('now',new DateTimeZone('Europe/Paris'));
         $article['visibility'] = $_POST['visibility'];
         // var_dump($article);
         // die();
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $article['score2'] = $_POST['score2'];
         $article['buteur2'] = $_POST['buteur2'];
         $article['prochainAffiche'] = $_POST['prochainAffiche'];
-        $article['date'] = time();
+        $article['date'] = new DateTime('now',new DateTimeZone('Europe/Paris'));
         $article['visibility'] = $_POST['visibility'];
         $actuDb->createArticle($article);
     }
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div>
         <form action="/admin/admin-actu.php" method="POST">
             <div class="admin">
-
+                
                 <h1>Page Admin Actu</h1>
                 <label for="">Title:</label><input type="text" name="title" value="<?= $title ?? '' ?>">
                 <label for="">Image:</label><input type="text" name="img" value="<?= $img ?? '' ?>">

@@ -27,8 +27,6 @@ $boutique=$stateBoutique->fetchAll();
             <p>Bienvenue <?= $user['prenom'] . ' ' . $user['nom'] ?></p>
             <a href="logout.php">Se déconnecter</a>
             </div>
-            <?php else :?>
-              <a href="connexion.php">Connexion/Inscription</a>  
             <?php endif ;?>
     </div>
     <h2>Boutique officielle du Football Club de Busnes</h2>

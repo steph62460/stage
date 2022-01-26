@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Signika Negative', sans-serif;
 }
 
 
@@ -48,12 +49,26 @@ a {
   margin-left: 2rem;
 }
 
+.nav-item .logoHeader {
+  width: 20px;
+  height: 20px;
+}
+
+
+.nav-item img {
+  width: 30px;
+  height: 30px;
+}
+
 .nav-link{
   font-size: 20px;
   font-weight: 400;
   color: #ffffff;
 }
 
+.nav-link .logoHeader {
+  margin-right: 4px;
+}
 
 
 .nav-logo {
@@ -72,7 +87,7 @@ a {
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 500px) {
   .nav-menu {
       position: absolute;
       left: -100%;
@@ -154,7 +169,7 @@ a {
     width: 604px;
     margin-bottom: 4%;
     position:relative;
-    border: 2px solid red;
+    border: 2px solid rgb(190, 44, 44);
   }
   
   .carousel2 {
@@ -162,7 +177,7 @@ a {
     width: 604px;
     margin-bottom: 4%;
     position:relative;
-    border: 2px solid red;
+    border: 2px solid rgb(190, 44, 44);
   }
  .carousel img {
   position: absolute;
@@ -224,7 +239,7 @@ a {
 
 
 .bactu{
-  border: 2px solid red;
+  border: 5px solid rgb(190, 44, 44);
     width: 20%;
     text-align: center;
     background-color: white;
@@ -234,8 +249,14 @@ a {
   margin-bottom: 2%;
   margin-right: 2%;
   margin-left: 2%;
-    border: 2px solid red;
+    border: 2px solid rgb(190, 44, 44);
     margin-top: 5%;
+    background-color: rgb(190, 44, 44);
+    border-radius: 30px;
+}
+
+.bactuinfo a {
+  color: white;
 }
 
 .lien {
@@ -266,14 +287,14 @@ a {
   
   
   .coln1{
-    border: 2px solid red;
+    border: 2px solid rgb(190, 44, 44);
     display: flex;
     justify-content: space-between;
     width: 350px;
   }
 
   .coln2{
-    border: 2px solid red;
+    border: 2px solid rgb(190, 44, 44);
     border-top-width: 0;
     display: flex;
     justify-content: space-between;
