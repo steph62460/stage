@@ -35,19 +35,8 @@ function insertCart(panier) {
     })
 }
 
-const art = document.querySelector('.articles-container');
-const panier2 = document.querySelector(".nav-item2");
-const span = document.createElement('span');
-const lien2 = document.createElement('a');
-lien2.href = "panier.php";
-const img2 = document.createElement("img");
-img2.src = "img/cart.png";
-img2.classList.add('panier');
+const art = document.querySelector('.nav-item2');
 
-const total = document.querySelector('.spTot')
-
-lien2.appendChild(img2);
-panier2.append(lien2, span);
 
 
 const divButton = document.querySelector('.button');
@@ -164,3 +153,13 @@ const priceArticle = (article) => {
 
 
 displayPanier();
+
+const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }

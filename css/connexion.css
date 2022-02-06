@@ -69,39 +69,14 @@ a {
   width: 50px;
 }
 
-
-
-@media only screen and (max-width: 900px) {
-  .nav-menu {
-      position: absolute;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      background-color: rgb(190, 44, 44);
-      width: 100%;
-      text-align: center;
-  }
-
-  .nav-menu.active {
-      left: 0;
-  }
-
-  .nav-item {
-      margin: 1rem;
-  }
-
-  .hamburger {
-      display: block;
-      cursor: pointer;
-  }
-
+.test {
+  min-height: calc(100vh -  82px - 80px);
+  display: flex; 
+   justify-content: space-evenly;
 }
 
-
 .formulaire {
-  min-height: calc(100vh -  86px - 73.4px);
-  
-  
+  display: flex;
 }
 
 h2 {
@@ -119,17 +94,38 @@ form {
 
 .cadre {
    border: 2px solid rgb(190, 44, 44);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 400px;
+}
+
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .text {
   margin-top: 10px;
+  font-size: 28px;
 }
 
 input{
   margin-bottom: 10px;
   margin-top: 10px;
+  border: 2px solid rgb(190, 44, 44);
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
 }
 
+input::placeholder {
+  text-align: center;
+  color: rgb(190, 44, 44);
+
+}
 .checkbox {
   display: flex;
   margin-top: 5px;
@@ -149,6 +145,10 @@ color: rgb(190, 44, 44);
 .inscrip {
   color: black;
   font-size: 24px;
+}
+
+.input2 {
+  width: 250px;
 }
 
 button {
@@ -177,4 +177,42 @@ button {
   background-color: rgb(190, 44, 44);
   text-align: center;
   color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-menu {
+      position: absolute;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: rgb(190, 44, 44);
+      width: 100%;
+      text-align: center;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 1rem;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+.test {
+  display: flex;
+}
+
+  .cadre {
+    width: 300px;
+  }
+
+  .inscrip {
+    text-align: center;
+  }
+
 }

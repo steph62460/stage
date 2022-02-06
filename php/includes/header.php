@@ -1,3 +1,4 @@
+
 <header class="header">
         <nav class="navbar">
             <a href="index.php" class="nav-logo"><img src="img/logo club busnes.png">FC Busnes</a>
@@ -24,9 +25,30 @@
                     <a href="contact.php" class="nav-link">
                     <img class="logoHeader" src="../../img/contact.png" alt="">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a href="connexion.php" class="nav-link"><img clas="login" src="../../img/connexion.jpg" alt=""></a>
+                <?php if($user) : ?>
+                    <li class="nav-item">
+                    <div class="logoProfil">
+                    <a href="profile.php" class="nav-link nav-link2"><img clas="login" src="../../img/profile.png" alt="">
+                    <p class="logInOut">Mon profil</p>
+                    </a>
+                    </div>
                 </li>
+                <li class="nav-item">
+                    <div class="logoProfil">
+                    <a href="logout.php" class="nav-link nav-link2"><img clas="login" src="../../img/logout.png" alt="">
+                    <p class="logInOut">Déconnexion</p>
+                    </a>
+                    </div>
+                </li>
+                <?php else : ?>
+                <li class="nav-item">
+                    <div class="logoProfil">
+                    <a href="connexion.php" class="nav-link nav-link2"><img clas="login" src="../../img/connexion.jpg" alt="">
+                    <p class="logInOut">Connexion/Inscription</p>
+                    </a>
+                    </div>
+                </li>
+                <?php endif; ?>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>

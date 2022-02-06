@@ -100,6 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        $stateUpdate->bindValue(':price2', $price2);
        $stateUpdate->execute();
 
+       header('Location: ../admin-boutique.php');
 }
 
 ?>
@@ -149,12 +150,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <label for="">Description:</label><input type="text" name="description" value="<?= $description ?? '' ?>">
             <div class="button">
-                <button><a href="../admin-boutique.php">MODIFIER</a></button>
-
+                <button>MODIFIER</button>
             </div>
         </div>
+    </form>
         <div>
-            <button class="button2"><a href="../index_admin.php">Retour à l'accueil</a></button>
+            <button class="button2"><a href="../admin-boutique.php">Retour à la page boutique</a></button>
         </div>
     </div>
 </body>

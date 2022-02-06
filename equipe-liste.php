@@ -1,6 +1,8 @@
 <?php
 
 $pdo = require_once './db.php';
+$pdo2 = require './isLoggedIn.php';
+$user = isLoggedIn();
 
 $id = $_GET['id'] ?? '';
 
@@ -58,6 +60,16 @@ $details = $stateOneTeam->fetchAll();
     </div>
     <?php require_once "./php/includes/footer.php" ?>
 </body>
-<!-- <script src="js/equipe-liste.js" type="module"></script> -->
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+</script>
 
 </html>

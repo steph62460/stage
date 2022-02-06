@@ -1,5 +1,12 @@
 <?php
 
+$pdo2 = require './isLoggedIn.php';
+$user = isLoggeIn();
+
+if(!$user) {
+    header('Location: /connexion.php');
+}
+
 $actuDb = require __DIR__ . '/../database/models/databaseActu.php';
 
 $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -24,7 +31,6 @@ if ($editOne) {
     $score2 = $oneActu['score2'];
     $buteur2 = $oneActu['buteur2'];
     $prochainMatch = $oneActu['prochainAffiche'];
-    $visibility = $oneActu['visibility'];
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -43,8 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $article['score2'] = $_POST['score2'];
         $article['buteur2'] = $_POST['buteur2'];
         $article['prochainAffiche'] = $_POST['prochainAffiche'];
-        $article['date'] = new DateTime('now',new DateTimeZone('Europe/Paris'));
-        $article['visibility'] = $_POST['visibility'];
+
         // var_dump($article);
         // die();
         $actuDb->updateArticle($article);
@@ -60,8 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $article['score2'] = $_POST['score2'];
         $article['buteur2'] = $_POST['buteur2'];
         $article['prochainAffiche'] = $_POST['prochainAffiche'];
-        $article['date'] = new DateTime('now',new DateTimeZone('Europe/Paris'));
-        $article['visibility'] = $_POST['visibility'];
         $actuDb->createArticle($article);
     }
 }
@@ -96,7 +99,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="">Score Equipe2: </label><input type="text" name="score2" placeholder="Score final: " value="<?= $score2 ?? '' ?>">
                 <label for="">Buteurs:</label><input type="text" name="buteur2" placeholder="Buteurs: " value="<?= $buteur2 ?? '' ?>">
                 <label for="">Prochaines rencontres:</label><input type="text" name="prochainAffiche" value="<?= $prochainMatch ?? '' ?>">
-                <label for="">Visibilité:</label><input type="text" name="visibility" value="<?= $visibility ?? '' ?>" placeholder=" mettre true pour afficher, mettre false si on n'affiche pas l'article">
                 <div class="button">
                     <button><?= $editOne ? "UPDATE" : "INSERT" ?></button>
                     <button type="button"><a href="./admin-actu.php?select=ok" name="id">SELECT ALL</a></button>
@@ -109,7 +111,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <tr>
                     <th>Id</th>
                     <th>Titre</th>
-                    <th>Visibilité</th>
                     <th>Editer</th>
                     <th>Supprimer</th>
                 </tr>
@@ -119,7 +120,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <tr>
                         <td><?= $a['id'] ?? '' ?></td>
                         <td><?= $a['title'] ?? '' ?></td>
-                        <td><?= $a['visibility'] ?? '' ?></td>
                         <td><button class="edit"><a href="./admin-actu.php?edit=<?= $a['id'] ?>" name="id">EDITER</a></button></td>
                         <td><button class="delete">Delete</button></td>
                     </tr>

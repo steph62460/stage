@@ -1,6 +1,8 @@
 <?php
 
 $pdo = require './db.php';
+$pdo2 = require './isLoggedIn.php';
+$user = isLoggedIn();
 
 $stateTeam = $pdo->prepare('SELECT * FROM equipes');
 $stateTeam->execute();
@@ -18,7 +20,6 @@ $equipes = $stateTeam->fetchAll();
 <head>
     <?php require_once "./php/includes/head.php" ?>
     <link rel="stylesheet" href="css/equipes.css">
-    <link rel="stylesheet" media="(max-width: 900px)" href="css/responsive/equipesmedia.css">
     <title>FC Busnes - Site officiel - Liste Equipes</title>
 </head>
 
@@ -41,4 +42,14 @@ $equipes = $stateTeam->fetchAll();
 </body>
 
 </html>
-<!-- <script src="js/equipes.js" type="module"></script> -->
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+</script>

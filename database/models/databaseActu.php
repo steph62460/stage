@@ -23,9 +23,7 @@ class ActuDatabase
             score2,
             texte1,
             texte2,
-            title,
-            date,
-            visibility
+            title
         ) VALUES (
             :buteur1,
             :buteur2,
@@ -35,9 +33,7 @@ class ActuDatabase
             :score2,
             :texte1,
             :texte2,
-            :title,
-            :date,
-            :visibility
+            :title
         )
         ');
 
@@ -52,9 +48,7 @@ class ActuDatabase
             score2=:score2,
             texte1=:texte1,
             texte2=:texte2,
-            title=:title,
-            date=:date,
-            visibility=:visibility
+            title=:title
             WHERE id=:id
         ');
 
@@ -89,8 +83,6 @@ class ActuDatabase
         $this->stateCreate->bindValue(':texte1', $article['texte1']);
         $this->stateCreate->bindValue(':texte2', $article['texte2']);
         $this->stateCreate->bindValue(':title', $article['title']);
-        $this->stateCreate->bindValue(':date', time());
-        $this->stateCreate->bindValue(':visibility', $article['visibility']);
         $this->stateCreate->execute();
         return $this->fetchArticle($this->pdo->lastInsertId());
     }
@@ -106,8 +98,6 @@ class ActuDatabase
         $this->stateUpdate->bindValue(':texte1', $article['texte1']);
         $this->stateUpdate->bindValue(':texte2', $article['texte2']);
         $this->stateUpdate->bindValue(':title', $article['title']);
-        $this->stateUpdate->bindValue(':date', time());
-        $this->stateUpdate->bindValue(':visibility', $article['visibility']);
         $this->stateUpdate->bindValue(':id', $article['id']);
         $this->stateUpdate->execute();
         return $article;

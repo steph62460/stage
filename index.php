@@ -3,7 +3,11 @@
 
 $pdo = require_once './db.php';
 
-$stateIndex = $pdo->prepare('SELECT * FROM articles_actu');
+$pdo2 = require './isLoggedIn.php';
+$user = isLoggedIn();
+
+
+$stateIndex = $pdo->prepare('SELECT * FROM articles_actu ORDER BY id DESC');
 $stateIndex->execute();
 $index=$stateIndex->fetchAll();
 
@@ -23,6 +27,13 @@ $index=$stateIndex->fetchAll();
 
 <body>
     <?php require_once "./php/includes/header.php"  ?>
+    <div class="connexion">
+        <?php if($user) : ?>
+            <div>
+            <p>Bienvenue <?= $user['prenom'] . ' ' . $user['nom'] ?></a></p>
+            </div>
+            <?php endif ;?>
+    </div>
     <!---------------------------------------------------------fin du header----------------------------------------------------------------------->
 
     <div class="article-panier">

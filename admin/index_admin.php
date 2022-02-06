@@ -3,6 +3,9 @@
 $pdo = require '../isLoggedIn.php';
 $user = isLoggeIn();
 
+if(!$user) {
+    header('Location: /connexion.php');
+}
         $date = time();
         setlocale(LC_TIME, 'french.UTF-8');
 

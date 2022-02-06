@@ -22,7 +22,7 @@
                 </li>
             <li class="nav-item">
                 <div class="nav-item2"></div>
-                <a href="panier.php"><img src="img/cart.png" alt="" height="50px"></a>
+                <a href="panier.php"><img src="img/cart.png" alt="" height="50px"><span></span></a>
             </li>
         </ul>
         <div class="hamburger">

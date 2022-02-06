@@ -2,15 +2,21 @@
 
 $boutiqueDb = require '../db.php';
 
-$readAll = $pdo->prepare('SELECT * FROM boutique');
+$pdo2 = require '../isLoggedIn.php';
+$user = isLoggeIn();
+
+if(!$user) {
+    header('Location: /connexion.php');
+}
+
+$readAll = $boutiqueDb->prepare('SELECT * FROM boutique');
 $readAll->execute();
 $selectAll = $readAll->fetchAll();
 $article = [];
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
- 
-   
+     
         $adulte = $_POST['adulte'];
         $denomination = $_POST['denomination'];
         $description = $_POST['description'];
@@ -95,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stateCreate->bindValue(':price1', $price1);
         $stateCreate->bindValue(':price2', $price2);
         $stateCreate->execute();
-    
+        
 }
 
 
@@ -130,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="">Taille5:</label><input class="tailles" type="text" name="option5" value="<?= $option5 ?? '' ?>">
                 </div>
             <label for="">Prix Enfant: </label><input class="price" type="text" name="price2" value="<?= $price2 ?? '' ?>" placeholder="prix + €">
-            <label for="">Prix Enfant2: </label><input class="price2" type="text" name="enfant" value="<?= $enfant ?? '' ?>" placeholder="nottez prix enfant: prix + €">
+            <label for="">Prix Enfant2: </label><input class="price2" type="text" name="enfant" value="<?= $enfant ?? '' ?>" placeholder="notez prix enfant: prix + €">
 
             </div>
             <div class="option">
@@ -143,13 +149,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="">Taille5:</label><input class="tailles" type="text" name="option10" value="<?= $option10 ?? '' ?>">
                 </div>
             <label for="">Prix Adulte: </label><input class="price" type="text" name="price1" value="<?= $price1 ?? '' ?>" placeholder="prix + €">
-            <label for="">Prix Adulte2: </label><input class="price2" type="text" name="adulte" value="<?= $adulte ?? '' ?>" placeholder="nottez prix adulte: prix + €">
+            <label for="">Prix Adulte2: </label><input class="price2" type="text" name="adulte" value="<?= $adulte ?? '' ?>" placeholder="notez prix adulte: prix + €">
             </div>
             <label for="">Description:</label><input type="text" name="description" value="<?= $description ?? '' ?>">
             <div class="button">
                 <button>PUBLIER</button>
             </div>
         </div>
+    </form>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -169,15 +176,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <td><img src="<?= $a['img'] ?? '' ?>" alt="" class="img"></td>
                         <td><?= $a['denomination'] ?? '' ?></td>
                         <td><?= $a['description'] ?? '' ?></td>
-                        <td><?= $a['price'] ?? '' ?></td>
+                        <td><?= $a['price1'] ?? '' ?></td>
                         <td><button class="edit"><a href="./boutique/update.php?edit=<?= $a['id'] ?>">EDITER</a></button></td>
-                        <td><button class="delete"><a href="./boutique/delete.php?delete=<?= $a['id'] ?>">SUPPRIMER</a></button></td>
+                        <td><button class="delete"><a href="./boutique/delete.php?delete=<?= $a['id'] ?>" onclick="return confirm('Voulez-vous vraiment supprimer l\'article <?= $a['denomination'] ?>?')">SUPPRIMER</a></button></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
         <div>
-            <button class="button2">Retour à l'accueil</button>
+            <button class="button2"><a href="index_admin.php">Retour à l'accueil</a></button>
         </div>
     </div>
 </body>

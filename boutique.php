@@ -21,14 +21,6 @@ $boutique=$stateBoutique->fetchAll();
 <body>
     <?php require_once "./php/includes/header_boutique.php" ?>
     <div class="test">
-    <div class="connexion">
-        <?php if($user) : ?>
-            <div>
-            <p>Bienvenue <?= $user['prenom'] . ' ' . $user['nom'] ?></p>
-            <a href="logout.php">Se déconnecter</a>
-            </div>
-            <?php endif ;?>
-    </div>
     <h2>Boutique officielle du Football Club de Busnes</h2>
         <div class="boutique">
             <?php foreach ($boutique as $a) : ?>
@@ -43,4 +35,16 @@ $boutique=$stateBoutique->fetchAll();
     </div>
 <?php require_once "./php/includes/footer.php" ?>
 </body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+
+</script>
 </html>

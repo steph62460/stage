@@ -1,6 +1,8 @@
 <?php
 
 $pdo = require './db.php';
+$pdo2 = require './isLoggedIn.php';
+$user = isLoggedIn();
 $id=$_GET["id"];
 $stateDetailArticle = $pdo->prepare('SELECT * FROM boutique WHERE id=:id');
 $stateDetailArticle->bindValue(":id", $id);
@@ -25,7 +27,7 @@ $detailArticle=$stateDetailArticle->fetch();
 </head>
 <body>
 <?php  require_once "./php/includes/header_boutique.php" ?>
-<section class="section">
+<section>
     <div class="article single-product">
        <div class="row">
          <div class="produit">
@@ -51,7 +53,7 @@ $detailArticle=$stateDetailArticle->fetch();
              <p>Qte: 
              <input type="number" min="1" value="1">
             </p>
-             <h3><?= $detailArticle['price1'] ?> €</h3>
+             <h3><?= $detailArticle['price1'] ?></h3>
              <div class="divbutton">
                <button class="btn">Ajoutez au panier</button>
              </div>
@@ -63,6 +65,15 @@ $detailArticle=$stateDetailArticle->fetch();
 </section>
 <?php  require_once "./php/includes/footer.php" ?>
 </body>
-<!-- <script src="js/article_boutique.js" type="module"></script> -->
+<script>const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+</script>
 </html>
 

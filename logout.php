@@ -9,7 +9,7 @@ if($sessionId) {
     $statement->bindValue(':id', $sessionId);
     $statement->execute();
     setcookie('session', '', time() - 1);
-    header('Location: /boutique.php');
+    header('Location: /index.php');
 } else {
-    header('Location: /boutique.php');
+    header('Location: /index.php');
 }

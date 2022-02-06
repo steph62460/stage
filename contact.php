@@ -1,10 +1,15 @@
+<?php
+
+$pdo2 = require './isLoggedIn.php';
+$user = isLoggedIn();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <?php  require_once "./php/includes/head.php" ?>
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" media="(max-width: 900px)" href="css/responsive/contactmedia.css">
-
     <title>FC Busnes - Site officiel - Contact</title>
 </head>
 <body>

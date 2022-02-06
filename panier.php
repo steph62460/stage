@@ -17,5 +17,6 @@
 </div>
 <?php require_once "./php/includes/footer.php" ?>
 </body>
-<script src="js/panier.js" type="module"></script>
+<script src="js/panier.js" type="module">
+</script>
 </html>
